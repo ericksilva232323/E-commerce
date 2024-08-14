@@ -4,7 +4,7 @@
 | ------------ | ------ |
 | ERICK | DESIGN |
 | LEONARDO | FRONTEND |
-| CAMIlA | TAB |
+| CAMILLA | TAB |
 | JAQUELINE | BACKEND |
 
 ## Propostio 
