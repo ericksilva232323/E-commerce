@@ -43,7 +43,7 @@ Desenvolver um protótipo voltado a cliente que buscam produtos para uso própri
   https://www.figma.com/design/cR84vljxD6otZBWUos4rYM/Untitled?node-id=0-1&t=dleFBQib82fEFp1n-1
 ```
 
-
+Link do Canvas [text](https://www.canva.com/design/DAGN67pV63U/shFGK-hi4HWQwjiE9saieA/edit?utm_content=DAGN67pV63U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
 Nenhum arquivo escolhido
