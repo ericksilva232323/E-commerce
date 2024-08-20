@@ -111,3 +111,6 @@ function errorInput(input, message) {
 
     formItem.className = ""//class de onde estará a div para aparecer o erro
 }
+
+
+
