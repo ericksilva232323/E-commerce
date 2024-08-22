@@ -1,4 +1,80 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Alata;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27.6px;
+    text-align: right;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding:0;
+    color: #242424;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #335B96;
+    height: 15vh;
+    color: white;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 4vh;
+    width: 30vw;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 0 10px; /* Add padding to prevent the text from touching the edges */
+}
+
+.searchbar input {
+    flex: 1; /* Ensure the input field takes up available space */
+    border: none;
+    font-size: 17px;
+    outline: none;
+    padding-left: 10px; /* Add some padding inside the input */
+    text-align: left; /* Align text to the left */
+}
+
+#searchicon {
+    /* background-image: url(./assets/search.svg); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+#logo{
+    background-image: url(./assets/OIG3.png);
+    background-size: cover;
+    height: 8vw;
+    width: 8vw;
+}
+
+#shopingcart{
+    background-image: url(./assets/person-circle\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 5vh;
+    width: 5.5vw;
+    margin: 2vw;
+}
+
+main{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,6 +82,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: block;
+    background-color: #fff;
 }
 
 .slider{
@@ -110,4 +188,75 @@ body{
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #fff;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module p{
+    margin-bottom: 40px;
+}
+
+section.module:last-child{
+    margin-bottom: 0;
+}
+
+section.module h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module.content{
+    padding: 40px 0;
+    background-color: #ece7ec;
+}
+
+section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size:cover;
+}
+
+section.module.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: -o-linear-gradient(to bottom, rgba(0,0,0,0,) 0, rgba(0,0,0,0) 40%, #000 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0,) 0, rgba(0,0,0,0) 40%, #000 100%);
+}
+
+section.module.parallax-1{
+    background-image: url(./assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+}
+
+section.module.parallax-2{
+    background-image: url(./assets/utopia1.jpg);
+}
+
+section.module.parallax-3{
+    background-image: url(./assets/utopia2.png);
+}
+
+section.module.parallax h1{
+    color: #fff;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
 }

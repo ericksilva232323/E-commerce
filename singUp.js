@@ -12,6 +12,22 @@ form.addEventListener("submit", (event) => {
     checkForm();
 })
 
+email.addEventListener("blur", () => {
+    checkInputEmail();
+})
+
+username.addEventListener("blur", () => {
+    checkInputUsername();
+})
+
+number.addEventListener("blur", () => {
+    checkInputNumber();
+})
+
+cpf.addEventListener("blur", () => {
+    checkInputCpf();
+})
+
 function checkInputUsername() {
     const usernameValue = username.value;
 
