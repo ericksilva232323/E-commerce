@@ -39,7 +39,7 @@
 
 .modal{
     display: flex;
-    width: 50%;
+    width: 35%;
     height: 450px;
     min-height: 200px;
     background-color: #ffffffa1;
@@ -62,7 +62,15 @@ input[type=password] {
     padding: 8px 10px;
     border: #cdcdcd solid 1px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 65px;
+}
+
+input[type=submit]{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: #cdcdcd solid 1px;
+    border-radius: 5px;
+    margin-bottom: 65px;
 }
 
     

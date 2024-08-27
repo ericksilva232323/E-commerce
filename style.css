@@ -42,7 +42,12 @@ body{
     width: 30px;
     border: #000 solid 2px;
     border-radius: 100%;
+}
 
+#circle:hover{
+    height: 30px;
+    width: 30px;
+    background-color: #d9d9d941;
 }
 
 .btn img{
@@ -80,14 +85,14 @@ body{
 }
 
 #logo{
-    background-image: url(./assets/OIG3.png);
+    background-image: url(./assets/OIG3.jpg);
     background-size: cover;
     height: 8vw;
     width: 8vw;
 }
 
 #shopingcart{
-    background-image: url(./assets/person-circle\ 1.png);
+    background-image: url(./assets/person-circle.svg);
     background-size: contain;
     background-repeat: no-repeat;
     height: 5vh;
