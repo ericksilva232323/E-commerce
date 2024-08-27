@@ -24,10 +24,21 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #335B96;
     height: 15vh;
     color: white;
+}
+
+.btn{
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn img{
+    margin: -25px;
+    width: 30px;
+    height: 30px;
 }
 
 .searchbar {
@@ -36,7 +47,7 @@ body{
     background-color: white;
     height: 4vh;
     width: 30vw;
-    margin: 0 auto;
+    margin: 0 auto !important;
     border-radius: 30px;
     padding: 0 10px; /* Add padding to prevent the text from touching the edges */
 }
@@ -197,6 +208,20 @@ main{
     padding: 0 20px;
 }
 
+.container-logo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.container-logo div{
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
 section.module p{
     margin-bottom: 40px;
 }
@@ -251,6 +276,10 @@ section.module.parallax-2{
 
 section.module.parallax-3{
     background-image: url(./assets/utopia2.png);
+}
+
+section.module.parallax-4{
+    background-image: url(./assets/image4.jpg);
 }
 
 section.module.parallax h1{
