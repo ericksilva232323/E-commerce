@@ -6,21 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>slider com htmle css</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
+<!-- <section>
+    <div class="overlay">
+        <div class="loginform">
+            <a onclick="toggleModal()" class="close">&times;</a>
+            <h4>username</h4>
+            <input type="text" name="username">
+            <h4>password</h4>
+            <input type="password" name="password">
+            <button type="submit">login</button>
+        </div>
+    </div>
+</section> -->
+
 <body>
-    
+
     <header>
         <div class="navbar">
-            <div id="logo"></div>
+            <div id="logo">
+                <img src="./assets/">
+            </div>
             <div class="searchbar">
                 <input type="search">
-                <img id="searchicon" src="./assets/search.svg"></img>
+                <div id="searchicon"></div>
             </div>
-            <h1>Sign Up</h1>
-            <h1>Sign In</h1>
-            <div id="shopingcart"></div>
 
+            <div onclick="openModal()" class="btn">singIn<img src="./assets/circle.svg" /></div>
+
+            <div class="window-modal" id="windowModal">
+                <div class="modal">
+                    <button class="close" id="close"><svg id="close" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+                    <input type="text" placeholder="username">
+                    <input type="password">
+                    <input type="submit">
+
+                </div>
+            </div>
+
+            <div onclick="openModal()" class="btn">singUp<img src="./assets/circle-fill (1).svg" /></div>
+
+            <div class="window-modal" id="windowModal">
+                <div class="modal">
+                    <button class="close" id="close"><svg id="close" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+
+                </div>
+
+            </div>
+        </div>
         </div>
     </header>
 
@@ -36,22 +79,23 @@
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
                         <!-- Fim Radio Buttons-->
-            
+
                         <!-- Slide-->
                         <div class="slide first">
-                            <img src="./assets/Chuvisco.gif" alt="imagem 1"/>
+                            <img src="./assets/Chuvisco.gif" alt="imagem 1" />
                         </div>
                         <div class="slide">
-                            <img src="./assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg" alt="imagem2"/>
+                            <img src="./assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg"
+                                alt="imagem2" />
                         </div>
                         <div class="slide">
-                            <img src="./assets/43b608abc06b95fa5f3764826d87246d.jpg" alt="imagem 3"/>
+                            <img src="./assets/43b608abc06b95fa5f3764826d87246d.jpg" alt="imagem 3" />
                         </div>
                         <div class="slide">
-                            <img src="./assets/image.jpg" alt="imagem 4"/>
+                            <img src="./assets/image.jpg" alt="imagem 4" />
                         </div>
                         <!-- Fim Slide images-->
-            
+
                         <!-- Navigation auto-->
                         <div class="navigation-auto">
                             <div class="auto-btn1"></div>
@@ -59,16 +103,16 @@
                             <div class="auto-btn3"></div>
                             <div class="auto-btn4"></div>
                         </div>
-            
+
                     </div>
-            
+
                     <div class="manual-navigation">
                         <label for="radio1" class="manual-btn"></label>
                         <label for="radio2" class="manual-btn"></label>
                         <label for="radio3" class="manual-btn"></label>
                         <label for="radio4" class="manual-btn"></label>
                     </div>
-            
+
                 </div>
             </section>
 
@@ -76,10 +120,14 @@
                 <div class="container">
                     <h2>qualquer texto aqui...</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                 </div>
             </section>
@@ -92,10 +140,14 @@
                 <div class="container">
                     <h2>qualquer texto aqui...</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                 </div>
             </section>
@@ -108,17 +160,43 @@
                 <div class="container">
                     <h2>qualquer texto aqui...</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio provident quaerat optio laboriosam eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
                     </p>
                 </div>
-            </section> 
+            </section>
 
-    </main>
+            <section class="module parallax parallax-4">
+                <h1>FELIPE</h1>
+            </section>
+
+            <section class="module content">
+                <div class="container">
+                    <h2>qualquer texto aqui...</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
+                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
+                        provident quaerat optio laboriosam eveniet.
+                    </p>
+                </div>
+            </section>
+
+        </main>
 
 
-    <script src="scroll.js"></script>
+        <script src="scroll.js"></script>
+        <script src="singIn.js"></script>
 </body>
+
 </html>
