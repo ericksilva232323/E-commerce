@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
+    
 }
 
 .btn{
@@ -36,15 +37,44 @@
 }
 
 .modal{
-    width: 85%;
+    display: flex;
+    width: 35%;
     height: 450px;
     min-height: 200px;
     background-color: #ffffffa1;
     backdrop-filter: blur(10px);
     padding: 50px;
     border-radius: 20px;
+    justify-content: center;
+    text-align: center;
 }
 
+.loginform{
+    width: 350px;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: #cdcdcd solid 1px;
+    border-radius: 5px;
+    margin-bottom: 65px;
+}
+
+input[type=submit]{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: #cdcdcd solid 1px;
+    border-radius: 5px;
+    margin-bottom: 65px;
+}
+
+    
 .close{
     position: absolute;
     top: -5px;

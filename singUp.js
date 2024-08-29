@@ -1,118 +1,113 @@
-const form = document.getElementById("form")
+
+const form = document.getElementById("form");
 const username = document.getElementById("username")
 const email = document.getElementById("email")
-const number = document.getElementById("number")
-const cpf = document.getElementById("cpf")
 const password = document.getElementById("password")
-const confPass = document.getElementById("confPass")
+const passwordConfirmation = document.getElementById("password-confirmation");
+
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    checkForm();
+  checkForm();
 })
 
 email.addEventListener("blur", () => {
-    checkInputEmail();
+  checkInputEmail();
 })
+
 
 username.addEventListener("blur", () => {
-    checkInputUsername();
+  checkInputUsername();
 })
 
 
-cpf.addEventListener("blur", () => {
-    checkInputCpf();
-})
+function checkInputUsername(){
+  const usernameValue = username.value;
 
-function checkInputUsername() {
-    const usernameValue = username.value;
+  if(usernameValue === ""){
+    errorInput(username, "Preencha um username!")
+  }else{
+    const formItem = username.parentElement;
+    formItem.className = "form-content"
+  }
 
-    if (usernameValue === "") {
-        errorInput(username, "fill the Username")
-    } else {
-        const formItem = username.parentElement;
-        formItem.className = ""//class de onde estará a div para aparecer o erro
-    }
 }
 
-function checkInputEmail() {
-    const emailValue = email.value;
+function checkInputEmail(){
+  const emailValue = email.value;
 
-    if (emailValue === "") {
-        errorInput(email, "email is mandatory")
-    } else {
-        const formItem = email.parentElement;
-        formItem.classList = ""//class de onde estará a div para aparecer o erro
-    }
-}
+  if(emailValue === ""){
+    errorInput(email, "O email é obrigatório.")
+  }else{
+    const formItem = email.parentElement;
+    formItem.className = "form-content"
+  }
 
 
 }
 
 
-    if (cpfValue === "") {
-        error(cpfValue, "fill the CPF")
-    } else {
-        const formItem = cpf.parentElement;
-        formItem.classList = ""//class de onde estará a div para aparecer o erro
-    }
-}
+function checkInputPassword(){
+  const passwordValue = password.value;
 
-function checkInputPassword() {
-    const passwordValue = password.value;
+  if(passwordValue === ""){
+    errorInput(password, "A senha é obrigatória.")
+  }else if(passwordValue.length < 8){
+    errorInput(password, "A senha precisa ter no mínimo 8 caracteres.")
+  }else{
+    const formItem = password.parentElement;
+    formItem.className = "form-content"
+  }
 
-    if (passwordValue === "") {
-        errorInput(password, "fill the Password")
-    } else if (passwordValue.length < 8) {
-        errorInput(password, "minimum 8 characters")
-    } else {
-        const formItem = password.parentElement;
-        formItem.className = ""//class de onde estará a div para aparecer o erro
-    }
-}
 
-function checkInputConfpass() {
-    const passwordValue = password.value;
-    const confPassValue = confPass.value;
-
-    if (confPassValue === "") {
-        errorInput(confPass, "PassWord confirmation is mandatory")
-    } else if (confPassValue !== passwordValue) {
-        errorInput(confPass, "Password valid")
-    } else {
-        const formItem = confPass.parentElement;
-        formItem.className = ""//class de onde estará a div para aparecer o erro
-    }
 }
 
 
-function checkForm() {
-    checkInputUsername();
-    checkInputEmail();
-    checkInputNumber();
-    checkInputCpf();
-    checkInputPassword();
-    checkInputConfpass();
+function checkInputPasswordConfirmation(){
+  const passwordValue = password.value;
+  const confirmationPasswordValue = passwordConfirmation.value;
 
-    const formItem = form.querySelectorAll("")//class de onde estará a div para aparecer o erro
+  if(confirmationPasswordValue === ""){
+    errorInput(passwordConfirmation, "A confirmação de senha é obrigatória.")
+  }else if(confirmationPasswordValue !== passwordValue){
+    errorInput(passwordConfirmation, "As senhas não são iguais.")
+  }else{
+    const formItem = passwordConfirmation.parentElement;
+    formItem.className = "form-content"
+  }
 
-    const isValid = [...formItem].every((item) => {
-        return item.className === ""//class de onde estará a div para aparecer o erro
-    });
 
-    if (isValid) {
-        alert("registration completed successfully")
-    }
 }
 
-function errorInput(input, message) {
-    const formItem = input.parentElement;
-    const textMessage = formItem.querySelector("a")
 
-    textMessage.innerText = message;
+function checkForm(){
+  checkInputUsername();
+  checkInputEmail();
+  checkInputPassword();
+  checkInputPasswordConfirmation();
 
-    formItem.className = ""//class de onde estará a div para aparecer o erro
+  const formItems = form.querySelectorAll(".form-content")
+
+  const isValid = [...formItems].every( (item) => {
+    return item.className === "form-content"
+  });
+
+  if(isValid){
+    alert("CADASTRADO COM SUCESSO!")
+  }
+
+}
+
+
+function errorInput(input, message){
+  const formItem = input.parentElement;
+  const textMessage = formItem.querySelector("a")
+
+  textMessage.innerText = message;
+
+  formItem.className = "form-content error"
+
 }
 
 
