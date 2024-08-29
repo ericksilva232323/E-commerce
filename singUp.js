@@ -20,9 +20,6 @@ username.addEventListener("blur", () => {
     checkInputUsername();
 })
 
-number.addEventListener("blur", () => {
-    checkInputNumber();
-})
 
 cpf.addEventListener("blur", () => {
     checkInputCpf();
@@ -50,19 +47,9 @@ function checkInputEmail() {
     }
 }
 
-function checkInputNumber() {
-    const numberValue = number.value;
 
-    if (numberValue === "") {
-        error(numberValue, "number is mandatoryr")
-    } else {
-        const formItem = number.parentElement;
-        formItem.classList = ""//class de onde estará a div para aparecer o erro
-    }
 }
 
-function checkInputCpf() {
-    const cpfValue = cpf.value;
 
     if (cpfValue === "") {
         error(cpfValue, "fill the CPF")
