@@ -16,7 +16,7 @@
     - [ ] Criar o Documento de Requisitos
     - [x] Diagrama de Caso de Uso
 - [ ] Criar o Documento de Arquitetura
-    - [ ] Diagrama de Classes
+    - [x] Diagrama de Classes
     - [ ] Diagrama de Atividades
     - [ ] DER - Diagrama de Entidade Relacionamento
 
