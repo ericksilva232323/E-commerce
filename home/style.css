@@ -91,7 +91,7 @@ body{
 }
 
 #shopingcart{
-    background-image: url(./assets/person-circle\ 1.png);
+    background-image: url(../assets/person-circle\ 1.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 5vh;
@@ -349,19 +349,19 @@ section.module.parallax:after{
 }
 
 section.module.parallax-1{
-    background-image: url(./assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+    background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
 }
 
 section.module.parallax-2{
-    background-image: url(./assets/utopia1.jpg);
+    background-image: url(../assets/utopia1.jpg);
 }
 
 section.module.parallax-3{
-    background-image: url(./assets/utopia2.png);
+    background-image: url(../assets/utopia2.png);
 }
 
 section.module.parallax-4{
-    background-image: url(./assets/image4.jpg);
+    background-image: url(../assets/image4.jpg);
 }
 
 section.module.parallax h1{
