@@ -12,13 +12,13 @@
 - [x] Fazer uma análise de Risco - Matriz SWOT
 - [x] Desenvolver um Cronograma - Gantt
 - [x] Traçar o caminho crítico - PERT/CPM
-- [x] EAP - Estrutura Analítica do Projeto
-    - [ ] Criar o Documento de Requisitos
+- [ ] EAP - Estrutura Analítica do Projeto
+    - [] Criar o Documento de Requisitos
     - [x] Diagrama de Caso de Uso
-- [ ] Criar o Documento de Arquitetura
+- [x] Criar o Documento de Arquitetura
     - [x] Diagrama de Classes
-    - [ ] Diagrama de Atividades
-    - [ ] DER - Diagrama de Entidade Relacionamento
+    - [x] Diagrama de Atividades
+    - [x] DER - Diagrama de Entidade Relacionamento
 
 ## Sprint 03 - Backlog
 - [ ] Desenvolver o Código
