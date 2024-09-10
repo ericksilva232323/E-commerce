@@ -48,7 +48,6 @@ body{
 }
   
   .dropdown-content {
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
     width: 600px;
@@ -57,9 +56,15 @@ body{
     top: 20px;
     left: 155px;
     border-radius: 21px 0px 0px 0px;
-    opacity: 0px;
+    opacity: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 9;
+      /* Initial hidden state */
+      transform: translateY(-10px); /* Move it slightly up */
+      pointer-events: none; /* Prevent interaction when hidden */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for both */
+
+      /* Define the transition */
   }
   
   .dropdown-content a {
@@ -79,7 +84,10 @@ body{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {
-    display: block;
+    opacity: 1; /* Full opacity */
+    transform: translateY(0); /* Slide it into place */
+    pointer-events: auto; /* Enable interaction */
+
   }
 
 .btn{
@@ -150,14 +158,43 @@ body{
 }
 
 
-#shopingcart{
+.usermenu{
     background-image: url(./assets/person-circle.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: aqua;
     height: 5vh;
     width: 5.5vw;
     margin: 2vw;
+    pointer-events: none;
 }
+
+.usermenu .dropbtn{
+    cursor: pointer;
+    width: 102px;
+    height: 91px;
+    margin: 0;
+}
+
+.usermenu .dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 600px;
+    height: 500px;
+    padding-top: 100px;
+    top: 20px;
+    float: right;
+    border-radius: 21px 0px 0px 0px;
+    opacity: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9;
+      /* Initial hidden state */
+      transform: translateY(-10px); /* Move it slightly up */
+      pointer-events: none; /* Prevent interaction when hidden */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for both */
+
+      /* Define the transition */
+  }
 
 main{
     margin: 0;
