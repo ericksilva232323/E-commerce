@@ -204,6 +204,7 @@ main{
 
 .slide img{
     width: 800px;
+    background-size: cover;
 }
 
 .manual-navigation{
@@ -230,7 +231,7 @@ main{
 .manual-btn:hover{
     background-color: #fff;
 }
-
+/* SCROLL one */
 #radio1:checked ~ .first{
     margin-left: 0;
 }
@@ -246,6 +247,25 @@ main{
 #radio4:checked ~ .first{
     margin-left: -75%;
 } 
+/* end SCROLL one */
+
+/* SCROLL two */
+#radio5:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -50%;
+} 
+
+#radio8:checked ~ .first{
+    margin-left: -75%;
+} 
+/* end SCROLL two */
 
 .navigation-auto div{
     border: 2px solid #D9D9D9;
@@ -283,11 +303,30 @@ main{
     background-color: #fff;
 }
 
+#radio5:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
 .container{
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
     padding: 0 20px;
+    align-items: center;
 }
 
 .container-logo{
