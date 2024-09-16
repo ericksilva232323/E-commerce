@@ -1,0 +1,27 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.0"
+  },
+  "dependencie": {
+    "express": "^4.18.2"
+  }
+}
