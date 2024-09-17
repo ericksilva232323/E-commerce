@@ -95,7 +95,7 @@ function checkForm(){
 
   if(isValid){
     alert("CADASTRADO COM SUCESSO!")
-  }
+ }
 
 }
 

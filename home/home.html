@@ -9,24 +9,11 @@
     <link rel="stylesheet" href="modal.css">
 </head>
 
-<!-- <section>
-    <div class="overlay">
-        <div class="loginform">
-            <a onclick="toggleModal()" class="close">&times;</a>
-            <h4>username</h4>
-            <input type="text" name="username">
-            <h4>password</h4>
-            <input type="password" name="password">
-            <button type="submit">login</button>
-        </div>
-    </div>
-</section> -->
-
 <body>
 
     <header>
         <div class="navbar">
-            <div class="logo">
+            <div class="logo" onclick="toggleDropdown()">
                 <svg width="80" height="83" viewBox="0 0 80 83" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g style="mix-blend-mode:difference">
@@ -46,6 +33,9 @@
             <div class="searchbar">
                 <input type="search">
                 <div id="searchicon"></div>
+            </div>
+            <div class="searchContent">
+
             </div>
 
             <div onclick="openModal()" class="btn">singIn<img src="../assets/circle.svg" /></div>
@@ -75,6 +65,16 @@
 
     </header>
 
+    <div class="dropdown-content" id="myDropdown">
+
+        <a href="home.html">Home</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 3</a>
+
+    </div>
+
     <div class="wrapper">
         <main>
             <section class="module parallax parallax-1">
@@ -91,18 +91,16 @@
 
                         <!-- Slide-->
                         <div class="slide first">
-                            <img src="../itens/tenis/a2940d23-1058-42d3-8573-ff20a79ff43e.jpg" alt="imagem 1" />
+                            <img src="../itens/tenis/nike/jumpman.webp" alt="imagem 1" />
                         </div>
                         <div class="slide">
-                            <img src="../itens/tenis/0eba67f2-7c39-4546-84cd-cc4a04026997.jpg" alt="imagem 2" />
+                            <img src="../itens/tenis/nike/white_one.jpeg" alt="imagem 2" />
                         </div>
                         <div class="slide">
-                            <img src="../itens/tenis/Air Jordan 4 “First Class” PE Made Exclusively For WNBA Athletes.jpg"
-                                alt="imagem 3" width="400px" height="900px" />
+                            <img src="../itens/tenis/nike/tenis nike g3.jpg" alt="imagem 3" />
                         </div>
                         <div class="slide">
-                            <img src="../itens/tenis/e5cbc306-ba93-4180-9dc8-646fac2340e5.jpg" alt="imagem 4"
-                                width="400px" height="800px" />
+                            <img src="../itens/tenis/nike/tenis nike a3.jpg" alt="imagem 4" />
                         </div>
                         <!-- Fim Slide images-->
 
@@ -124,7 +122,9 @@
                     </div>
 
                 </div>
+
             </section>
+
 
             <section class="module content">
                 <div class="container">
@@ -146,17 +146,17 @@
 
                         <!-- Slide-->
                         <div class="slide first">
-                            <img src="../itens/tenis/0ZXSHM191006KBLX-pdp-1.jpg" alt="imagem 1" />
-                        </div>
-                        <div class="slide">
                             <img src="../itens/tenis/5d6a65b6-d9c10b8497223e41fc17217645810912-1024-1024.jpeg"
-                                alt="imagem 2" />
+                                alt="imagem 1" />
                         </div>
                         <div class="slide">
-                            <img src="../itens/tenis/s-l1200.jpg" alt="imagem 3" />
+                            <img src="../itens/tenis/s-l1200.jpg" alt="imagem 2" />
                         </div>
                         <div class="slide">
-                            <img src="../itens/tenis/de763131_800x.jpg" alt="imagem 4" />
+                            <img src="../itens/tenis/0ZXSHM191006KBLX-pdp-1.jpg" alt="imagem 3" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/nike/tenis nike m2.jpg" alt="imagem 4" />
                         </div>
                         <!-- Fim Slide images-->
 
@@ -178,52 +178,121 @@
                     </div>
 
                 </div>
+
             </section>
 
             <section class="module content">
                 <div class="container">
-                    <img src="../" alt="">
+                    <img src="../assets/bape.png" alt="bape">
                 </div>
             </section>
 
             <section class="module parallax parallax-3">
-                <h1>FELIPE</h1>
+
+                <div class="slider">
+
+                    <div class="slides">
+                        <!--Radio Butttons -->
+                        <input type="radio" name="radio-btn" id="radio9">
+                        <input type="radio" name="radio-btn" id="radio10">
+                        <input type="radio" name="radio-btn" id="radio11">
+                        <input type="radio" name="radio-btn" id="radio12">
+                        <!-- Fim Radio Buttons-->
+
+                        <!-- Slide-->
+                        <div class="slide first">
+                            <img src="../itens/tenis/puma/Tênis Puma tt.jfif" alt="imagem 1"/>
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/puma/tens puma tt3.jpg" alt="imagem 2" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/puma/tenis puma x2.jpg" alt="imagem 3" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/puma/Tênis Puma xc.jfif" alt="imagem 4" />
+                        </div>
+                        <!-- Fim Slide images-->
+
+                        <!-- Navigation auto-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="manual-navigation">
+                        <label for="radio9" class="manual-btn"></label>
+                        <label for="radio10" class="manual-btn"></label>
+                        <label for="radio11" class="manual-btn"></label>
+                        <label for="radio12" class="manual-btn"></label>
+                    </div>
+
+                </div>
+
             </section>
 
             <section class="module content">
                 <div class="container">
-                    <h2>qualquer texto aqui...</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
-                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
-                        provident quaerat optio laboriosam eveniet.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
-                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
-                        provident quaerat optio laboriosam eveniet.
-                    </p>
+                    <img src="../assets/puma.png" alt="">
                 </div>
             </section>
 
             <section class="module parallax parallax-4">
-                <h1>FELIPE</h1>
+
+                <div class="slider">
+
+                    <div class="slides">
+                        <!--Radio Butttons -->
+                        <input type="radio" name="radio-btn" id="radio13">
+                        <input type="radio" name="radio-btn" id="radio14">
+                        <input type="radio" name="radio-btn" id="radio15">
+                        <input type="radio" name="radio-btn" id="radio16">
+                        <!-- Fim Radio Buttons-->
+
+                        <!-- Slide-->
+                        <div class="slide first">
+                            <img src="../itens/tenis/vans/tenis vans p2.jpg" alt="imagem 1" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/vans/tenis vans v2.jpg" alt="imagem 2" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/vans/tenis vans u2.jpg" alt="imagem 3" />
+                        </div>
+                        <div class="slide">
+                            <img src="../itens/tenis/vans/tenis vans p.jfif" alt="imagem 4" />
+                        </div>
+                        <!-- Fim Slide images-->
+
+                        <!-- Navigation auto-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="manual-navigation">
+                        <label for="radio13" class="manual-btn"></label>
+                        <label for="radio14" class="manual-btn"></label>
+                        <label for="radio15" class="manual-btn"></label>
+                        <label for="radio16" class="manual-btn"></label>
+                    </div>
+
+                </div>
+
             </section>
 
             <section class="module content">
+                <img src="../assets/" alt="">
                 <div class="container">
-                    <h2>qualquer texto aqui...</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
-                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
-                        provident quaerat optio laboriosam eveniet.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis facilis tempora
-                        error repudiandae adipisci quasi incidunt eum? Unde mollitia rem voluptas quo quia odio
-                        provident quaerat optio laboriosam eveniet.
-                    </p>
-                </div>
+                    <img src="../assets/vans.jpg" width="100px" height="60px" alt="">
             </section>
 
         </main>
@@ -231,7 +300,7 @@
 
         <script src="scroll.js"></script>
         <script src="singIn.js"></script>
-        <script src="scroll1.js"></script>
+        <script src="dropDown.js"></script>
 </body>
 
 </html>
