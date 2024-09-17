@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`respondendo`);
+  console.log(`respondendo na porta`);
 });
