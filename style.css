@@ -54,7 +54,6 @@ body{
     height: 500px;
     padding-top: 100px;
     top: 20px;
-    left: 155px;
     border-radius: 21px 0px 0px 0px;
     opacity: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -166,7 +165,6 @@ body{
     height: 5vh;
     width: 5.5vw;
     margin: 2vw;
-    pointer-events: none;
 }
 
 .usermenu .dropbtn{
@@ -183,7 +181,6 @@ body{
     height: 500px;
     padding-top: 100px;
     top: 20px;
-    float: right;
     border-radius: 21px 0px 0px 0px;
     opacity: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -196,6 +193,29 @@ body{
       /* Define the transition */
   }
 
+  #myDropdown1 {
+    left: 155px;
+    top: 20px; /* Adjust top position as needed */
+}
+
+/* Right-side dropdown (myDropdown2) */
+#myDropdown2 {
+    right: 40px;
+    top: 20px; /* Adjust top position as needed */
+}
+#myDropdown2 a {
+    text-align: right;
+}
+ .usermenu .dropdown-content a {
+    color: black;
+    background-color: rgb(128, 128, 128);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+
+ 
 main{
     margin: 0;
     padding: 0;
