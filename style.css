@@ -161,10 +161,13 @@ body{
     background-image: url(./assets/person-circle.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: aqua;
     height: 5vh;
     width: 5.5vw;
     margin: 2vw;
+}
+
+.dropbtn{
+    background-color: #00000000;
 }
 
 .usermenu .dropbtn{
