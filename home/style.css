@@ -41,15 +41,21 @@ body{
     height: 30px;
 }
 
-.profile{
-    align-items: center;
-    margin: auto;
+#circle{
+    margin: 3px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border: #000 solid 2px;
+    border-radius: 100%;
 }
 
-.profile img{
-    width: 60px;
-    height: 60px;
+#circle:hover{
+    height: 30px;
+    width: 30px;
+    background-color: #d9d9d941;
 }
+
 
 .searchbar {
     display: flex;
@@ -71,14 +77,34 @@ body{
     text-align: left; /* Align text to the left */
 }
 
-
-
 #searchicon {
     background-image: url(../assets/search.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+ .logo .dropbtn {
+    cursor: pointer;
+    width: 102px;
+    height: 91px;
+    margin: 0;
+  }
+  
+  .logo .dropbtn svg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent SVG from blocking button clicks */
+}
+
+.dropbtn{
+    background-color: #00000000
 }
 
 .logo{
@@ -94,18 +120,22 @@ body{
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
     width: 600px;
     height: 500px;
     padding-top: 100px;
     top: 20px;
-    left: 155px;
     border-radius: 21px 0px 0px 0px;
-    opacity: 0px;
+    opacity: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 9;
+      /* Initial hidden state */
+      transform: translateY(-10px); /* Move it slightly up */
+      pointer-events: none; /* Prevent interaction when hidden */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for both */
+
+      /* Define the transition */
   }
 
   .dropdown-content a {
@@ -124,17 +154,69 @@ body{
   }
 
   .show {
-    display: block;
+    opacity: 1; /* Full opacity */
+    transform: translateY(0); /* Slide it into place */
+    pointer-events: auto; /* Enable interaction */
+
   }
 
-#shopingcart{
-    background-image: url(../assets/person-circle\ 1.png);
+  .usermenu{
+    background-image: url(../assets/person-circle.svg);
     background-size: contain;
     background-repeat: no-repeat;
     height: 5vh;
     width: 5.5vw;
     margin: 2vw;
 }
+
+.usermenu .dropbtn{
+    cursor: pointer;
+    width: 102px;
+    height: 91px;
+    margin: 0;
+}
+
+.usermenu .dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 600px;
+    height: 500px;
+    padding-top: 100px;
+    top: 20px;
+    border-radius: 21px 0px 0px 0px;
+    opacity: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9;
+      /* Initial hidden state */
+      transform: translateY(-10px); /* Move it slightly up */
+      pointer-events: none; /* Prevent interaction when hidden */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for both */
+
+      /* Define the transition */
+  }
+
+#myDropdown1 {
+    left: 155px;
+    top: 20px; /* Adjust top position as needed */
+}
+
+/* Right-side dropdown (myDropdown2) */
+#myDropdown2 {
+    right: 40px;
+    top: 20px; /* Adjust top position as needed */
+}
+#myDropdown2 a {
+    text-align: right;
+}
+ .usermenu .dropdown-content a {
+    color: black;
+    background-color: rgb(128, 128, 128);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+
 
 .container{
     background-color: #fafafa;

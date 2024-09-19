@@ -13,7 +13,9 @@
 
     <header>
         <div class="navbar">
-            <div class="logo" onclick="toggleDropdown()">
+            <div class="logo">
+
+                <button class="dropbtn" onclick="toggleDropdown('myDropdown1')"> 
                 <svg width="80" height="83" viewBox="0 0 80 83" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g style="mix-blend-mode:difference">
@@ -38,7 +40,7 @@
 
             </div>
 
-            <div onclick="openModal()" class="btn">singIn<img src="../assets/circle.svg" /></div>
+            <div onclick="openModal()" class="btn">LOG <h1 id="circle"> IN</h1></div>
 
             <div class="window-modal" id="windowModal">
                 <div class="modal">
@@ -58,20 +60,28 @@
 
             </div>
 
-            <div class="profile">
-                <img src="../assets/person-circle.svg" alt="">
+            <div class="usermenu">
+                <button class="dropbtn" onclick="toggleDropdown('myDropdown2')"></button>
+
             </div>
         </div>
 
     </header>
 
-    <div class="dropdown-content" id="myDropdown">
+    <div class="dropdown-content" id="myDropdown1">
 
-        <a href="home.html">Home</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 3</a>
+        <a href="#">Home</a>
+        <a href="#">Shirts & Tshirts</a>
+        <a href="#">Shorts & Trousers</a>
+        <a href="#">Shoes</a>
+        <a href="#">Accessories</a>
+
+    </div>
+
+    <div class="dropdown-content" id="myDropdown2">
+        <a href="#">profile</a>
+        <a href="#">settings</a>
+        <a href="#">favorites</a>
 
     </div>
 
