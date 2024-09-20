@@ -1,11 +1,14 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
+
 const app = express();
-const port = process.env.PORT || 3000;
+const router = require()
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(cors());
+app.use(express.json());
+app.use('/', router)
 
-app.listen(port, () => {
-  console.log(`respondendo na porta`);
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
 });

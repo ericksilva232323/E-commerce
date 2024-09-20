@@ -80,15 +80,9 @@ function checkForm(){
   });
 
   if(isValid){
-<<<<<<< HEAD
     alert("CADASTRADO COM SUCESSO!")
  }
 
-=======
-    alert("CADASTRADO COM SUCESSO!");
-    // Aqui você pode fazer um envio real do formulário
-  }
->>>>>>> 28a50ad4d778e13a06b3cf6b589560d1727ce569
 }
 
 function errorInput(input, message){
@@ -172,6 +166,3 @@ app.post('/login', async (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
 });
-
-
-
