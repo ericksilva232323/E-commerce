@@ -120,33 +120,6 @@ body {
     height: 30px;
 }
 
-.searchbar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    height: 4vh;
-    width: 30vw;
-    margin: 0 auto !important;
-    border-radius: 30px;
-    padding: 0 10px; /* Add padding to prevent the text from touching the edges */
-}
-
-.searchbar input {
-    flex: 1; /* Ensure the input field takes up available space */
-    border: none;
-    font-size: 17px;
-    outline: none;
-    padding-left: 10px; /* Add some padding inside the input */
-    text-align: left; /* Align text to the left */
-}
-
-#searchicon {
-    background-image: url(./assets/search.svg); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-}
 
 .logo{
     background-color: #D9D9D9;
@@ -162,16 +135,12 @@ body {
 
 
 .usermenu{
-    background-image: url(./assets/person-circle.svg);
+    background-image: url(../assets/person-circle.svg);
     background-size: contain;
     background-repeat: no-repeat;
     height: 5vh;
     width: 5.5vw;
     margin: 2vw;
-}
-
-.dropbtn{
-    background-color: #00000000;
 }
 
 .usermenu .dropbtn{
@@ -200,7 +169,7 @@ body {
       /* Define the transition */
   }
 
-  #myDropdown1 {
+#myDropdown1 {
     left: 155px;
     top: 20px; /* Adjust top position as needed */
 }
@@ -248,29 +217,11 @@ body {
 }
 
 #searchicon {
-    background-image: url(./assets/search.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-}
-
-
-#searchicon {
     background-image: url(../assets/search.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
-}
-
-#shopingcart {
-    background-image: url(../assets/person-circle\ 1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 5vh;
-    width: 5.5vw;
-    margin: 2vw;
 }
 
 .container {
