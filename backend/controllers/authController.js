@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('../config/db');
+const db = require('../db');
 
 // Função para cadastrar usuário
 exports.register = (req, res) => {

@@ -1,15 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/authRoutes');
-require('dotenv').config();
-const db = require('./config/db');
+const userRoutes = require('./routes/user');
+const productRoutes = require('./routes/product');
+const orderRoutes = require('./routes/order');
 
 const app = express();
+const PORT = 5000;
 
 app.use(bodyParser.json());
-app.use('/auth', authRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
