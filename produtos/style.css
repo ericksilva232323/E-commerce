@@ -389,11 +389,17 @@ section.module.parallax-4 {
 }
 
 section.module.parallax h1 {
-    color: #fff;
     text-align: center;
-    font-size: 78px;
     z-index: 50;
     text-transform: uppercase;
+}
+
+.title-parallax{
+  font-size: 200px;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.200);
+  margin: 0 auto;
 }
 
 /* glass effect */
