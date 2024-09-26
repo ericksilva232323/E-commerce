@@ -1,35 +1,38 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const mysql = require('mysql2');
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth'); // O arquivo que criamos anteriormente
 
 const app = express();
 const port = 3000;
 
-// Middleware
+// Configurar middleware
+app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static('home')); // Serve arquivos estáticos da pasta frontend
 
-// Configuração do banco de dados
+// Configurar a conexão com o banco de dados
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'ecommerce',
-    password: '', // deixe vazio se não houver senha
-    database: 'ecommerce',
+    password: '', // sem senha
+    database: 'ecommerce'
 });
 
-// Conexão com o banco de dados
+// Conectar ao banco de dados
 db.connect(err => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados:', err);
         return;
     }
-    console.log('Conectado ao banco de dados!');
+    console.log('Conectado ao banco de dados.');
 });
 
-// Rotas de autenticação
-app.use('/auth', authRoutes(db));
+// Usar rotas de autenticação
+app.use('/backend/auth', authRoutes(db));
 
 // Iniciar o servidor
 app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
