@@ -47,8 +47,8 @@ function checkInputPassword(){
 
   if(passwordValue === ""){
     errorInput(password, "A senha é obrigatória.");
-  } else if(passwordValue.length < 8){
-    errorInput(password, "A senha precisa ter no mínimo 8 caracteres.");
+  } else if(passwordValue.length < 3){
+    errorInput(password, "A senha precisa ter no mínimo 3 caracteres.");
   } else {
     successInput(password);
   }
