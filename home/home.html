@@ -16,16 +16,34 @@
         <a href="javascript:void(0)" class="closebtn" onclick="cloneNav()">&times;</a>
 
         <div class="overLay-content">
-            <a href="#">PRODUCT</a>
+            <a href="home.html">HOME</a>
+            <br>
+            <a href="../produtos/index.html">PRODUCT</a>
             <br>
             <a href="#">SERVICE</a>
             <br>
             <a href="#">CONTACT</a>
             <br>
-            <a href="#">CLIENTE</a>
+            <a href="#">CLIENT</a>
             <br>
         </div>
-        
+
+    </div>
+
+    <div id="profileNav" class="overLay-dir">
+
+        <a href="javascript:void(0)" class="closebtn-dir" onclick="closeNav()">&times;</a>
+
+        <div class="overLay-content-dir">
+            <a href="#">test1</a>
+            <br>
+            <a href="#">test2</a>
+            <br>
+            <a href="#">test3</a>
+            <br>
+            <a href="#">test4</a>
+        </div>
+
     </div>
 
     <header>
@@ -42,21 +60,15 @@
 
         <div class="navbar-mid">
 
-            <input type= "search">
-
-            <!-- <button class="navbar-mid-button">
-                
-                <img src="../assets/search.svg" alt="">
-            
-            </button> -->
+            <input type="search">
 
         </div>
 
         <div class="navbar-dir">
 
-            <button class="navbar-dir-button">
+            <button class="navbar-dir-button" onclick="openNavDir()">
 
-
+                <img src="../assets/person-circle.svg" alt="logo">
 
             </button>
 
@@ -254,8 +266,11 @@
 
         </main>
 
+    </div>
+
 </body>
 
 </html>
 
 <script src="menu.js"></script>
+<script src="menu2.js"></script>

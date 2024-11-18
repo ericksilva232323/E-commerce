@@ -26,12 +26,11 @@ header {
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
-
+  padding: 10px;
 }
 
 .navbar-esq {
   margin: 10px;
-
 }
 
 .navbar-esq-button {
@@ -87,11 +86,6 @@ header {
   font-size: 60px;
 }
 
-.overLay .closebtn:hover,
-.overLay .closebtn:focus{
-  color: red;
-}
-
 @media screen and (max-height:450px) {
   .overLay a {
     font-size: 20px;
@@ -116,10 +110,6 @@ header {
   border-radius: 20px;
 }
 
-.navbar-mid{
-
-}
-
 .navbar-mid input{
   width: 500px;
   height: 30px;
@@ -132,8 +122,75 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.navbar-mid-button{
+.navbar-dir-button{
+  border-radius: 60px;
+  transition: 0.5s;
+  background-color: #335B96;
+  width: 100px;
+  height: 100px;
+}
 
+.navbar-dir img{
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #335B96;
+}
+
+.overLay-dir{
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.overLay-content-dir{
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overLay-dir a{
+  padding: 8px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  font-size: 34px;
+  transition: 0.7s;
+}
+
+.overLay-dir a:hover, 
+.overLay-dir a:focus{
+  color: #f1f1f1;
+}
+
+.overLay-dir .closebtn-dir{
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height:450px) {
+  .overLay-dir a {
+    font-size: 20px;
+  }
+
+  .overLay-dir,
+  .closebtn-dir {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
 
 
