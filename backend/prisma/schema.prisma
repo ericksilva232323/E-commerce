@@ -13,4 +13,61 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Product{
+  id Int @id @default(autoincrement())
+  title String
+  description String @db.VarChar(255)
+  price Int 
+  size String
+  cart Cart[]
+  like Like[]
+  pay Pay[]
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  name String 
+  subname String
+  email Int
+  number String
+  password String
+  loginUser LoginUser[]
+}
+
+model Cart{
+  id Int @id @default(autoincrement())
+  loginUser LoginUser @relation(fields: [loginId], references: [id])
+  loginId Int
+  product Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+model Like{
+  id Int @id @default(autoincrement())
+  loginUser LoginUser @relation(fields: [loginId], references: [id])
+  loginId Int
+  product Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+model LoginUser{
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  type String
+  cart Cart[]
+  like Like[]
+  pay Pay[]
+}
+
+model Pay{
+  id Int @id @default(autoincrement())
+  loginUser LoginUser @relation(fields: [loginId], references: [id])
+  loginId Int
+  product Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+
+
 
