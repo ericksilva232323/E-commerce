@@ -1,0 +1,89 @@
+{
+    "Product": [
+      {
+        "id": 1,
+        "title": "T-Shirt",
+        "description": "A comfortable cotton t-shirt.",
+        "price": 1500,
+        "size": "M",
+        "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2uXyN2l9-WjojDbvNzfkSgTxNJX9CJc956Q&s"
+      },
+      {
+        "id": 2,
+        "title": "Jeans",
+        "description": "Slim-fit blue jeans.",
+        "price": 4500,
+        "size": "32",
+        "images": "https://images.tcdn.com.br/img/img_prod/1249807/calca_jeans_slim_fit_tradicional_masculina_lemier_collection_149_1_3fdb618a56a26cf173d7c99e77078285.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Sneakers",
+        "description": "Stylish running shoes.",
+        "price": 6500,
+        "size": "10",
+        "images": "https://imgnike-a.akamaihd.net/1920x1920/024583ID.jpg"
+      }
+    ],
+    "User": [
+      {
+        "id": 1,
+        "name": "John",
+        "subname": "Doe",
+        "email": "john.doe@example.com",
+        "number": "1234567890",
+        "password": "hashed_password",
+        "type": "customer"
+      },
+      {
+        "id": 2,
+        "name": "Jane",
+        "subname": "Smith",
+        "email": "jane.smith@example.com",
+        "number": "0987654321",
+        "password": "hashed_password",
+        "type": "customer"
+      }
+    ],
+    "Cart": [
+      {
+        "id": 1,
+        "loginId": 1,
+        "productId": 2
+      },
+      {
+        "id": 2,
+        "loginId": 2,
+        "productId": 1
+      }
+    ],
+    "Like": [
+      {
+        "id": 1,
+        "loginId": 1,
+        "productId": 3
+      },
+      {
+        "id": 2,
+        "loginId": 2,
+        "productId": 2
+      }
+    ],
+    "Pay": [
+      {
+        "id": 1,
+        "loginId": 1,
+        "productId": 1,
+        "amount": 1500,
+        "paymentStatus": "Completed"
+      },
+      {
+        "id": 2,
+        "loginId": 2,
+        "productId": 3,
+        "amount": 6500,
+        "paymentStatus": "Pending"
+      }
+    ]
+  }
+  

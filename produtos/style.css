@@ -206,13 +206,15 @@
   }
   
   .container {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 20px;
-    align-items: center;
+    height: 100%;
+    max-height: 80vh;
+    max-width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    align-self: center;
   }
   
   .container-logo {
@@ -263,16 +265,7 @@
     -o-background-size: cover;
   }
   
-  section.module.parallax:after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 8;
-    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0, ) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0, ) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
-  }
-  
+
   section.module.parallax-1 {
     background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
   }
@@ -320,3 +313,31 @@
   align-items: center;
 }
 
+.card{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-img-top{
+  max-width: 250px;
+  object-fit: cover;
+}
+
+button{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}

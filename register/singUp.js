@@ -12,7 +12,6 @@ router.post('/register', [
   const hashedPassword = await bcrypt.hash(password, 10);
   const query = 'INSERT INTO users (username, password, email) VALUES (?, ?, ?)';
 
-<<<<<<< HEAD
   if(emailValue === ""){
     errorInput(email, "O email é obrigatório.");
   } else if (!emailRegex.test(emailValue)) {
@@ -20,7 +19,7 @@ router.post('/register', [
   } else {
     successInput(email);
   }
-}
+},
 
 function checkInputPassword(){
   const passwordValue = password.value.trim();
@@ -32,7 +31,7 @@ function checkInputPassword(){
   } else {
     successInput(password);
   }
-}
+},
 
 function checkInputPasswordConfirmation(){
   const passwordValue = password.value.trim();
@@ -45,7 +44,7 @@ function checkInputPasswordConfirmation(){
   } else {
     successInput(passwordConfirmation);
   }
-}
+},
 
 function checkForm(){
   checkInputUsername();
@@ -57,12 +56,5 @@ function checkForm(){
 
   const isValid = [...formItems].every((item) => {
     return item.classList.contains("success");
-=======
-  db.query(query, [username, hashedPassword, email], (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({ id: results.insertId, username });
->>>>>>> 4d7a546d405be53ebd9d334baad1985219c4c831
   });
 });
