@@ -1,21 +1,23 @@
 {
-  "name": "backend",
+  "name": "flow",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
     "prisma": "^5.22.0"
   },
-  "description": "",
   "dependencies": {
-    "@prisma/client": "^5.22.0"
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
   },
   "prisma": {
-    "seed": "node ./prisma/seed.js"
+  "seed": "node prisma/seed"
   }
 }
