@@ -207,16 +207,16 @@
   
   .container {
     width: 100%;
-    height: 100%;
-    max-height: 80vh;
     max-width: 1170px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
-    align-self: center;
-  }
-  
+    align-items: flex-start; /* Align cards to the top */
+    margin: 0 auto;
+    padding: 20px;
+    overflow: visible; /* Remove scrollbar */
+}
+
   .container-logo {
     display: flex;
     justify-content: space-evenly;
@@ -292,15 +292,11 @@
 
 /* listen of products in display grid  */
 
-.container-itens{
-  border: 3px solid #000;
+.container-itens {
   margin: 8px;
   display: grid;
-  place-items: center;
-  /* grid-template-columns: 100px 100px 100px 100px; */
-  grid-template-columns: repeat(3, 2fr);
-  /* grid-template-columns: repeat(auto-fit, minimax(200px, 1fr)); */
-  gap: 4px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 16px; /* Adjust spacing between items */
 }
 
 .box{
@@ -312,24 +308,26 @@
   justify-content: center;
   align-items: center;
 }
-
-.card{
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 20px;
-  padding: 10px;
-  width: fit-content;
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width within grid column */
+  max-width: 300px;
+  padding: 20px;
+  margin: auto;
+  height: 400px; /* Consistent height */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-img-top{
-  max-width: 250px;
-  object-fit: cover;
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Prevent images from stretching too tall */
+    object-fit: cover; /* Crop to fit the box */
 }
 
 button{

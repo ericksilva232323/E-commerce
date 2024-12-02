@@ -11,7 +11,7 @@ const User = require('./controllers/user');
 router.get('/user', User.read);
 router.get('/user/:id', User.read);
 
-router.get('product/', Product.read);
+router.get('/product', Product.read);
 
 router.get('/',(req, res) => { return res.json("API FLOW(E-COMMERCE) respondendo")});
 

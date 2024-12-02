@@ -1,64 +1,29 @@
 const prods = document.querySelector(".container");
-const produtos = [
-    {
-        "id": 1,
-        "nome": "Tênis lindão",
-        "descricao": "O tênis mais lindo do mundo",
-        "preco": 200.00,
-        "imagem": "tenis1.png"
-    },
-    {
-        "id": 2,
-        "nome": "Tênis bunitinho",
-        "descricao": "O tênis mais bunitinho de hoje",
-        "preco": 180.00,
-        "imagem": "tenis2.png"
-    },
-    {
-        "id": 3,
-        "nome": "Bruzinha",
-        "descricao": "Camiseta branca simples",
-        "preco": 49.90,
-        "imagem": "camiseta1.png"
-    },
-    {
-        "id": 4,
-        "nome": "Camiseta Preta",
-        "descricao": "Camiseta pretinha básica",
-        "preco": 59.90,
-        "imagem": "camiseta2.png"
-    },
-    {
-        "id": 5,
-        "nome": "Calsa jeans masculino",
-        "descricao": "Calsa jeans masculino, azul básico",
-        "preco": 49.90,
-        "imagem": "calsa1.png"
-    },
-    {
-        "id": 6,
-        "nome": "Calsa jeans feminino",
-        "descricao": "Calsa jeans feminino, azul básico",
-        "preco": 49.90,
-        "imagem": "calsa2.png"
-    }
-];
 
-function listarProdutos() {
+
+async function listarProdutos() {
+    try{
+        const response = await fetch("http://localhost:3000/product");
+        const produtos = await response.json ();
+    
     console.log()
     let output = "";
     produtos.forEach(produto => {
         output += `
-            <div class="card" style="width: 18rem;">
-                <h3 class="card-title  text-center">${produto.nome}</h3>
-                <div class="card-body">
-                    <p class="card-text text-center">R$ ${produto.preco.toFixed(2).replaceAll('.',',')}</p>
+           <div class="card" style="width: 18rem;">
+                    <img src="${produto.images}" class="card-img-top" alt="${produto.title}">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">${produto.title}</h3>
+                        <p class="card-text text-center">R$ ${produto.price.toFixed(2).replaceAll('.', ',')}</p>
+                        <button class="btn btn-primary" onclick="comprar(${produto.id})">Comprar</button>
+                    </div>
                 </div>
-                <button class="btn btn-primary" onclick="comprar(${produto.id})">Comprar</button>
-            </div>
             `;
     });
     prods.innerHTML += output;
+}catch (error) {
+    console.error("Error fetching products:", error);
+}
 }
 
 function comprar(id) {
