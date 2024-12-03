@@ -10,6 +10,7 @@ const User = require('./controllers/user');
 
 router.get('/user', User.read);
 router.get('/user/:id', User.read);
+router.post('/register', User.create);
 
 router.get('/product', Product.read);
 
