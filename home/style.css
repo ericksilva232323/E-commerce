@@ -49,7 +49,7 @@ header {
   width: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9;
+  z-index: 11;
   position: fixed;
   left: 0;
   top: 0;
@@ -619,4 +619,37 @@ h1 {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+#login-form, #profile {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#login-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #0056b3;
 }
