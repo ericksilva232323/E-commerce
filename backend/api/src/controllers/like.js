@@ -4,10 +4,6 @@ require('dotenv').config();
 
 const read = async (req, res) => {
 
-    if(!req.user){
-        return res.status(401).json({ message: 'User is not authenticate'})
-    }
-
     if(req.params.id !== undefined){
         const like = await prisma.like.findMany({
             where: {
@@ -24,24 +20,7 @@ const read = async (req, res) => {
     }
 }
 
-// const auth = (req, res, next) => {
-//     const token = req.header.authorization?.split(' ')[1];
-
-//     if(!token){
-//         return res.status(401).json({message:'Token not provide'});
-//     }
-
-//     try{
-//         const user = verifyToken(token);
-//         req.user = user;
-//         next();
-//     } catch(error){
-//         return res.status(401).json({message:'Token invalid'});
-//     }
-// };
-
 module.exports = {
-    read,
-    // auth
+    read
 }
 
