@@ -3,6 +3,7 @@ const prisma = new PrismaClient();
 require('dotenv').config();
 
 const read = async (req, res) => {
+
     if(req.params.id !== undefined){
         const cart = await prisma.cart.findMany({
             where: {
