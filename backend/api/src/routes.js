@@ -15,10 +15,8 @@ router.post('/register', User.create);
 router.get('/product', Product.read);
 
 router.get('/like', Like.read);
-// router.get('/like', Auth, read);
 
 router.get('/cart', Cart.read);
-// router.get('/cart', Auth, read);
 
 router.get('/',(req, res) => { return res.json("API FLOW(E-COMMERCE) respondendo")});
 

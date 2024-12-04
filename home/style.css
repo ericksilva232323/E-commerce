@@ -276,18 +276,96 @@ section.module.parallax:after {
 
 section.module.parallax-1 {
   background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+  transition: 2s;
+}
+
+.module.parallax.parallax-1:hover{
+  background-image: url(../assets/utopia1.jpg);
+  transition: 2s;
+}
+
+.module.parallax.parallax-1 div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px #fff;
+  margin: 0 420px 0 420px;
+  border-radius: 10px;
+}
+
+.module.parallax.parallax-1 div img{
+  border-radius: 10px;
 }
 
 section.module.parallax-2 {
   background-image: url(../assets/utopia1.jpg);
+  transition: 2s;
+}
+
+.module.parallax.parallax-2:hover{
+  background-image: url(../assets/utopia2.png);
+}
+
+.module.parallax.parallax-2 div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px #fff;
+  margin: 0 420px 0 420px;
+  border-radius: 10px;
+}
+
+.module.parallax.parallax-2 div img{
+  border-radius: 10px;
 }
 
 section.module.parallax-3 {
   background-image: url(../assets/utopia2.png);
 }
 
+.module.parallax.parallax-3:hover{
+  background-image: url(../assets/image4.jpg);
+  transition: 2s;
+}
+
+.module.parallax.parallax-3 div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px #fff;
+  margin: 0 420px 0 420px;
+  border-radius: 10px;
+}
+
+.module.parallax.parallax-3 div img{
+  border-radius: 10px;
+  transition: 2s;
+}
+
 section.module.parallax-4 {
   background-image: url(../assets/image4.jpg);
+  transition: 2s;
+}
+
+.module.parallax.parallax-4:hover{
+  background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+}
+
+.module.parallax.parallax-4 div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px #fff;
+  margin: 0 420px 0 420px;
+  border-radius: 10px;
+}
+
+.module.parallax.parallax-4 div img{
+  border-radius: 10px;
 }
 
 section.module.parallax h1 {
