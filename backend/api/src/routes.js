@@ -1,19 +1,28 @@
 const express = require('express');
-
+const authenticateToken = require('./jwt'); 
 const router = express.Router();
 
-// const Cart = require('./controllers/cart');
-// const Like = require('./controllers/like');
-// const Pay = require('./controllers/pay');
+// Importing controllers
 const Product = require('./controllers/product');
 const User = require('./controllers/user');
 
-router.get('/user', User.read);
-router.get('/user/:id', User.read);
-router.post('/register', User.create);
+// User routes
+router.get('/user', authenticateToken, User.read); 
+router.get('/user/:id', authenticateToken, User.read); 
+router.post('/register', User.create); 
+router.post('/login', User.login); 
 
-router.get('/product', Product.read);
+// Product routes
+router.get('/product', Product.read); // Public route to read all products
 
-router.get('/',(req, res) => { return res.json("API FLOW(E-COMMERCE) respondendo")});
+// Root route
+router.get('/', (req, res) => {
+    return res.json({ message: "API FLOW(E-COMMERCE) is responding" });
+});
 
-module.exports = router; 
+// Fallback for unsupported routes
+router.all('*', (req, res) => {
+    res.status(404).json({ error: "Route not found" });
+});
+
+module.exports = router;

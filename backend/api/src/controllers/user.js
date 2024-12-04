@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken'); // Ensure you have jwt installed and required
 
 require('dotenv').config();
 
@@ -19,20 +20,46 @@ const read = async (req, res) => {
 }
 
 const login = async (req, res) => {
-    const { password } = req.body;
-    const user = await prisma.user.findFirst({
-        where: {
-            password:password
-        }, select: {
-            id: true,
-            user: true
+    const { email, password } = req.body;
+
+    try {
+        // Check if user exists by email
+        const user = await prisma.user.findUnique({
+            where: { email },
+        });
+
+        if (!user) {
+            return res.status(401).json({ error: "User not found" });
         }
-    });
-    if (user === null){
-        return res.status(401).json("Password Failed");
+
+        // Validate password
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
+            return res.status(401).json({ error: "Invalid password" });
+        }
+
+        // Generate JWT token
+        const token = jwt.sign(
+            { id: user.id, nome: user.nome, email: user.email },
+            process.env.JWT_SECRET,
+            { expiresIn: "1h" }
+        );
+
+        // Return user info and token
+        return res.status(200).json({
+            message: "Login successful",
+            user: {
+                id: user.id,
+                nome: user.nome,
+                email: user.email,
+            },
+            token,
+        });
+    } catch (error) {
+        console.error("Error during login:", error);
+        return res.status(500).json({ error: "Internal server error" });
     }
-    return res.json(user);
-}
+};
 
 const create = async (req, res) => {
     console.log(req.body);
