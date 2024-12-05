@@ -19,7 +19,8 @@
     "esm": "^3.2.25",
     "express": "^4.21.1",
     "fs.promises": "^0.1.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0"
   },
   "prisma": {
     "seed": "node prisma/seed"

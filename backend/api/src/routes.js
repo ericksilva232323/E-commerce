@@ -2,15 +2,14 @@ const express = require('express');
 const authenticateToken = require('./jwt'); 
 
 const router = express.Router();
-// const { Auth } = require('./controllers/middleware/middleware');
 
 // Importing controllers
 const Product = require('./controllers/product');
 const User = require('./controllers/user');
 
 // User routes
-router.get('/user', authenticateToken, User.read); 
-router.get('/user/:id', authenticateToken, User.read); 
+router.get('/users',User.readAll); 
+router.get('/user/:id', authenticateToken, User.authRead); 
 router.post('/register', User.create); 
 router.post('/login', User.login); 
 

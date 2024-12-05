@@ -11,9 +11,11 @@ const logoutButton = document.getElementById("logout");
 // Check if the user is logged in
 function checkAuth() {
   const token = localStorage.getItem("token");
-  if (token) {
+  const userId = localStorage.getItem("userId");
+
+  if (token && userId) {
     // Fetch user profile
-    fetch(`${API_BASE_URL}/user`, {
+    fetch(`${API_BASE_URL}/user/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -25,11 +27,15 @@ function checkAuth() {
         return response.json();
       })
       .then((data) => {
-        showProfile(data);
+        showProfile(data); // Display user info
       })
       .catch(() => {
-        logout();
+        logout(); // If token is invalid, log out the user
       });
+  } else {
+    // If no token, show login form
+    loginForm.style.display = "block";
+    profileSection.style.display = "none";
   }
 }
 
@@ -40,7 +46,7 @@ document.getElementById("login").addEventListener("submit", (event) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch(`${API_BASE_URL}/user/login`, {
+  fetch(`${API_BASE_URL}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -54,8 +60,9 @@ document.getElementById("login").addEventListener("submit", (event) => {
       return response.json();
     })
     .then((data) => {
-      localStorage.setItem("token", data.token);
-      showProfile(data.user);
+      localStorage.setItem("token", data.token); // Store the JWT in localStorage
+      localStorage.setItem("userId", data.user.token);
+      showProfile(data.user); // Display the user's profile
     })
     .catch((error) => {
       loginError.textContent = error.message;
@@ -64,10 +71,10 @@ document.getElementById("login").addEventListener("submit", (event) => {
 
 // Show profile section
 function showProfile(user) {
-  loginForm.style.display = "none";
-  profileSection.style.display = "block";
-  usernameDisplay.textContent = user.nome;
-  userEmailDisplay.textContent = user.email;
+  loginForm.style.display = "none"; // Hide login form
+  profileSection.style.display = "block"; // Show profile section
+  usernameDisplay.textContent = user.name || user.nome; // Display user's name
+  userEmailDisplay.textContent = user.email; // Display user's email
 }
 
 // Handle logout
@@ -76,10 +83,10 @@ logoutButton.addEventListener("click", () => {
 });
 
 function logout() {
-  localStorage.removeItem("token");
-  loginForm.style.display = "block";
-  profileSection.style.display = "none";
+  localStorage.removeItem("token"); // Remove the JWT from localStorage
+  loginForm.style.display = "block"; // Show login form
+  profileSection.style.display = "none"; // Hide profile section
 }
 
-// Initialize
+// Initialize on page load
 checkAuth();
