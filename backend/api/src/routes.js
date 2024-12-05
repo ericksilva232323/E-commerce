@@ -7,6 +7,7 @@ const router = express.Router();
 // Importing controllers
 const Product = require('./controllers/product');
 const User = require('./controllers/user');
+const Cart = require('./controllers/cart')
 
 // User routes
 router.get('/user', authenticateToken, User.read); 
@@ -17,6 +18,8 @@ router.post('/login', User.login);
 // Product routes
 router.get('/product', Product.read); // Public route to read all products
 
+// Cart routes
+router.get('/cart', Cart.read);
 
 // Root route
 router.get('/', (req, res) => {

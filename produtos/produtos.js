@@ -1,15 +1,15 @@
-const prods = document.querySelector(".container");
+const prods = document.getElementById(".container");
 
 
 async function listarProdutos() {
-    try{
+    try {
         const response = await fetch("http://localhost:3000/product");
-        const produtos = await response.json ();
-    
-    console.log()
-    let output = "";
-    produtos.forEach(produto => {
-        output += `
+        const produtos = await response.json();
+
+        console.log()
+        let output = "";
+        produtos.forEach(produto => {
+            output += `
            <div class="card" style="width: 18rem;">
                     <img src="${produto.images}" class="card-img-top" alt="${produto.title}">
                     <div class="card-body">
@@ -19,11 +19,11 @@ async function listarProdutos() {
                     </div>
                 </div>
             `;
-    });
-    prods.innerHTML += output;
-}catch (error) {
-    console.error("Error fetching products:", error);
-}
+        });
+        prods.innerHTML += output;
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
 }
 
 function comprar(id) {
