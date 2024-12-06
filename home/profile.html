@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 
-<body onload="listarProdutos()">
-
+<body onload="checkAuth()">
     <div id="myNav" class="overLay">
-
         <a href="javascript:void(0)" class="closebtn" onclick="cloneNav()">&times;</a>
-
         <div class="overLay-content">
             <a href="home.html">HOME</a>
             <br>
@@ -24,13 +21,10 @@
             <a href="./clients.html">CLIENT</a>
             <br>
         </div>
-
     </div>
 
     <div id="profileNav" class="overLay-dir">
-
         <a href="javascript:void(0)" class="closebtn-dir" onclick="closeNav()">&times;</a>
-
         <div class="overLay-content-dir">
             <a href="./profile.html">PROFILE</a>
             <br>
@@ -42,68 +36,57 @@
             <br>
             <a href="#">OPTIONS</a>
         </div>
-
     </div>
 
     <header>
-
         <div class="navbar-esq">
-
             <button class="navbar-esq-button" onclick="openNav()">
-
                 <img class="navbar-img" src="../assets/OIG3.jpg" alt="">
-
             </button>
-
         </div>
 
         <div class="navbar-mid">
-
             <input type="search">
-
         </div>
 
         <div class="navbar-dir">
-
             <button class="navbar-dir-button" onclick="openNavDir()">
-
                 <img src="../assets/person-circle.svg" alt="logo">
-
             </button>
-
         </div>
-
     </header>
 
     <div class="wrapper">
-
         <main>
-            
-            <section class="module parallax parallax-1" >
+            <section class="module parallax parallax-1">
                 <div class="container">
-                        <div id="login-form">
-                          <h2>Login</h2>
-                          <form id="login">
+                    <!-- Login form -->
+                    <div id="login-form" style="display: block;">
+                        <h2>Login</h2>
+                        <form id="login">
                             <input type="email" id="email" placeholder="Email" required />
                             <input type="password" id="password" placeholder="Password" required />
                             <button type="submit">Login</button>
-                          </form>
-                          <p id="login-error" style="color: red;"></p>
-                        </div>
-                        
-                        <div id="profile" style="display: none;">
-                          <h2>Welcome, <span id="username"></span></h2>
-                          <p>Email: <span id="user-email"></span></p>
-                          <button id="logout">Logout</button>
-                        </div>
-                      </div>
+                        </form>
+                        <p>não possui uma conta ? cadastre se <a href="../register/cadastro.html">aqui</a></p>
+                        <p id="login-error" style="color: red;"></p>
+                    </div>
+
+                    <!-- Profile Section -->
+                    <div id="profile" style="display: none;">
+                        <h2>Welcome, <span id="username"></span></h2>
+                        <p>Email: <span id="user-email"></span></p>
+                        <button id="logout">Logout</button>
+                    </div>
                 </div>
             </section>
-     </body>
-</html>
-            
-<script src="menu2.js"></script>
+        </main>
+    </div>
+
+    
+</body>
 <script src="login.js"></script>
 <script src="./menu.js"></script>
 <script src="./menu2.js"></script>
-            
+
+</html>

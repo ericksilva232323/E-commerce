@@ -24,11 +24,11 @@ model Product {
 model User {
   id          Int      @id @default(autoincrement())
   name        String   @db.VarChar(100)
-  subname     String   @db.VarChar(100)
+  subname     String?  @db.VarChar(100)
   email       String   @unique
   number      String   @db.VarChar(20)
   password    String
-  type        String
+  type        String?
   cart        Cart[]
   like        Like[]
   pay         Pay[]
