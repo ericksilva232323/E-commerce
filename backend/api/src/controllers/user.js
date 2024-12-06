@@ -6,39 +6,45 @@ require('dotenv').config();
 
 
 const authRead = async (req, res) => {
-    try {
+  try {
       const token = req.headers['authorization']?.split(' ')[1]; // Extract token from Authorization header
-  
+      const userId = req.params.id; // Get user ID from the URL
+
       if (!token) {
-        return res.status(401).json({ error: 'Token is required' });
+          return res.status(401).json({ error: 'Token is required' });
       }
-  
+
       jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
-        if (err) {
-          return res.status(403).json({ error: 'Invalid token' });
-        }
-  
-        // Use decoded.id for the user ID
-        const user = await prisma.user.findUnique({
-          where: { id: decoded.id }, // Use decoded.id, which is the user ID from the token
-          select: {
-            id: true,
-            name: true,
-            email: true,
-          },
-        });
-  
-        if (!user) {
-          return res.status(404).json({ error: 'User not found' });
-        }
-  
-        return res.json(user); // Send the user data back
+          if (err) {
+              return res.status(403).json({ error: 'Invalid token' });
+          }
+
+          // Check if the userId from URL matches the id in the token
+          if (decoded.id !== parseInt(userId)) {
+              return res.status(403).json({ error: 'User ID mismatch' });
+          }
+
+          // Fetch user data using the userId
+          const user = await prisma.user.findUnique({
+              where: { id: parseInt(userId) },
+              select: {
+                  id: true,
+                  name: true,
+                  email: true,
+              },
+          });
+
+          if (!user) {
+              return res.status(404).json({ error: 'User not found' });
+          }
+
+          return res.json(user); // Send the user data back
       });
-    } catch (error) {
+  } catch (error) {
       console.error('Error fetching user:', error);
       return res.status(500).json({ error: 'Internal server error' });
-    }
-  };
+  }
+};
   
   
 const readAll = async (req, res) => {

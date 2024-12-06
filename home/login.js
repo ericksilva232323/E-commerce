@@ -1,92 +1,80 @@
-const API_BASE_URL = "http://localhost:3000"; // Adjust to your backend URL
-
-// DOM elements
-const loginForm = document.getElementById("login-form");
-const loginError = document.getElementById("login-error");
-const profileSection = document.getElementById("profile");
-const usernameDisplay = document.getElementById("username");
-const userEmailDisplay = document.getElementById("user-email");
-const logoutButton = document.getElementById("logout");
-
-// Check if the user is logged in
-function checkAuth() {
-  const token = localStorage.getItem("token");
+async function checkAuth() {
+  const token = localStorage.getItem("authToken");
   const userId = localStorage.getItem("userId");
 
-  if (token && userId) {
-    // Fetch user profile
-    fetch(`${API_BASE_URL}/user/${userId}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch user profile");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        showProfile(data); // Display user info
-      })
-      .catch(() => {
-        logout(); // If token is invalid, log out the user
+  if (!token || !userId) {
+      // No token or user ID, show login form
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("profile").style.display = "none";
+      return;
+  }
+
+  try {
+    const response = await fetch(`http://localhost:3000/user/${userId}`, {
+      method: "GET",
+          headers: {
+              Authorization: `Bearer ${token}`,
+          },
       });
-  } else {
-    // If no token, show login form
-    loginForm.style.display = "block";
-    profileSection.style.display = "none";
+
+      if (response.ok) {
+          const userData = await response.json();
+          document.getElementById("login-form").style.display = "none";
+          document.getElementById("profile").style.display = "block";
+
+          // Update profile data
+          document.getElementById("username").textContent = userData.name;
+          document.getElementById("user-email").textContent = userData.email;
+      } else {
+          // Token might be invalid or expired
+          localStorage.removeItem("authToken");
+          localStorage.removeItem("userId");
+          document.getElementById("login-form").style.display = "block";
+          document.getElementById("profile").style.display = "none";
+      }
+  } catch (error) {
+      console.error("Error checking auth:", error);
+      localStorage.removeItem("authToken");
+      localStorage.removeItem("userId");
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("profile").style.display = "none";
   }
 }
 
-// Handle login form submission
-document.getElementById("login").addEventListener("submit", (event) => {
-  event.preventDefault();
+// Login handler
+document.getElementById("login").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch(`${API_BASE_URL}/login`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Invalid credentials");
+  try {
+    const response = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+          // Save token and user ID
+          localStorage.setItem("authToken", data.token);
+          localStorage.setItem("userId", data.user.id);
+
+          // Reload to show profile data
+          checkAuth();
+      } else {
+          document.getElementById("login-error").textContent = data.error || "Login failed";
       }
-      return response.json();
-    })
-    .then((data) => {
-      localStorage.setItem("token", data.token); // Store the JWT in localStorage
-      localStorage.setItem("userId", data.user.token);
-      showProfile(data.user); // Display the user's profile
-    })
-    .catch((error) => {
-      loginError.textContent = error.message;
-    });
+  } catch (error) {
+      console.error("Error during login:", error);
+      document.getElementById("login-error").textContent = "Internal error during login";
+  }
 });
 
-// Show profile section
-function showProfile(user) {
-  loginForm.style.display = "none"; // Hide login form
-  profileSection.style.display = "block"; // Show profile section
-  usernameDisplay.textContent = user.name || user.nome; // Display user's name
-  userEmailDisplay.textContent = user.email; // Display user's email
-}
-
-// Handle logout
-logoutButton.addEventListener("click", () => {
-  logout();
+// Logout handler
+document.getElementById("logout").addEventListener("click", () => {
+  localStorage.removeItem("authToken");
+  localStorage.removeItem("userId");
+  checkAuth(); // Reload to show login form
 });
-
-function logout() {
-  localStorage.removeItem("token"); // Remove the JWT from localStorage
-  loginForm.style.display = "block"; // Show login form
-  profileSection.style.display = "none"; // Hide profile section
-}
-
-// Initialize on page load
-checkAuth();
