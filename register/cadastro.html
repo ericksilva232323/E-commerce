@@ -24,37 +24,46 @@
 
     <form id="form" class="form">
       <div class="form-content">
-        <label for="username">Nome do usuário</label>
-        <input type="text" id="username" placeholder="Digite o nome do usuario..." />
-        <a>Aqui vai a mensagem de erro....</a>
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite o nome" required />
+        <a id="name-error"></a>
+      </div>
+
+      <div class="form-content">
+        <label for="subname">Sobrenome</label>
+        <input type="text" id="subname" placeholder="Digite o sobrenome" />
+        <a id="subname-error"></a>
       </div>
 
       <div class="form-content">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Digite o seu email..." />
-        <a>Aqui vai a mensagem de erro....</a>
+        <input type="email" id="email" placeholder="Digite o seu email..." required />
+        <a id="email-error"></a>
+      </div>
+
+      <div class="form-content">
+        <label for="number">Número de telefone</label>
+        <input type="tel" id="number" placeholder="Digite seu número de telefone..." required />
+        <a id="number-error"></a>
       </div>
 
       <div class="form-content">
         <label for="password">Senha</label>
-        <input type="password" id="password" placeholder="Digite sua senha..." />
-        <a>Aqui vai a mensagem de erro....</a>
+        <input type="password" id="password" placeholder="Digite sua senha..." required />
+        <a id="password-error"></a>
       </div>
 
       <div class="form-content">
         <label for="password-confirmation">Confirmação de senha</label>
-        <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..." />
-        <a>Aqui vai a mensagem de erro....</a>
+        <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..." required />
+        <a id="password-confirmation-error"></a>
       </div>
 
       <button type="submit">Cadastrar</button>
-
     </form>
-
   </div>
 
-
-  <script src="singUp.js"></script>
+  <script src="signUp.js"></script>
 </body>
 
 </html>
