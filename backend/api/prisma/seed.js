@@ -2,7 +2,6 @@ import { readFile } from 'fs/promises';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-
 async function main() {
   const data = JSON.parse(
     await readFile(new URL('./dados/dados.json', import.meta.url))

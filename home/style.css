@@ -683,3 +683,26 @@ h1 {
   background-color: #0056b3;
 }
 
+/* Hide search bar on mobile */
+@media (max-width: 768px) {
+  .navbar-mid {
+      display: none; /* Hide search bar on mobile */
+  }
+
+  /* Hide parallax effect on mobile */
+  .module.parallax {
+      background-attachment: scroll; /* Disable parallax effect */
+      position: relative;
+      overflow: hidden; /* Hide any overflow */
+  }
+
+  /* For all module.parallax sections, ensure proper layout */
+  .module.parallax.parallax-1,
+  .module.parallax.parallax-2,
+  .module.parallax.parallax-3,
+  .module.parallax.parallax-4 {
+      position: relative;
+      overflow: hidden; /* Hide overflow */
+  }
+
+}
