@@ -1,4 +1,4 @@
-const prods = document.getElementById(".container");
+const prods = document.getElementById("produtos");
 
 
 async function listarProdutos() {
@@ -22,7 +22,7 @@ async function listarProdutos() {
         });
         prods.innerHTML += output;
     } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetching products:", error)
     }
 }
 
