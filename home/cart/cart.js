@@ -1,11 +1,19 @@
-const cart = document.getElementById("cart");
-
-async function listarCart(){
-    try{
-        const response = await fetch("http:localhost:3000/cart/");
-        const cart = await response.json();
-
-        console.log()
+const prods = document.getElementById("produtos");
+var carrinho = JSON.parse(window.localStorage.getItem("carrinho"))
+var produtos = []
+if(!carrinho){
+    carrinho = [];
+}else{
+    console.log(JSON.stringify(carrinho));
+}
+    async function listarCart() {
+    
+        if (!carrinho.length) {
+            prods.innerHTML = "<p>O carrinho está vazio.</p>";
+            return;
+        }
+    
+        // Generate HTML for cart items
         let output = "";
         let total = 0;
         carrinho.forEach(produto => {

@@ -1,9 +1,9 @@
 const prods = document.getElementById("produtos");
 var produtos = []
 var carrinho = JSON.parse(window.localStorage.getItem("carrinho"))
-if(!carrinho){
+if (!carrinho) {
     carrinho = [];
-}else{
+} else {
     console.log(JSON.stringify(carrinho));
 }
 
@@ -36,7 +36,7 @@ function comprar(id) {
     if (produto) {
         alert(`Produto "${produto.title}" adiconado ao carrinho`);
         carrinho.push(produto);
-        window.localStorage.setItem("carrinho",JSON.stringify(carrinho));
+        window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
         window.location.reload();
     } else {
         alert("Produto não encontrado.");
