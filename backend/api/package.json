@@ -13,6 +13,10 @@
   },
   "dependencies": {
     "@mercadopago/sdk-js": "^0.0.3",
+<<<<<<< HEAD
+=======
+    "@mercadopago/sdk-react": "^0.0.19",
+>>>>>>> 4a071a3e7bf53904dbde831ef744f4e2beccac1c
     "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -22,7 +26,12 @@
     "fs.promises": "^0.1.2",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
+<<<<<<< HEAD
     "mercadopago": "^2.1.0"
+=======
+    "nodemon": "^3.1.7",
+    "server": "^1.0.41"
+>>>>>>> 4a071a3e7bf53904dbde831ef744f4e2beccac1c
   },
   "prisma": {
     "seed": "node prisma/seed"
