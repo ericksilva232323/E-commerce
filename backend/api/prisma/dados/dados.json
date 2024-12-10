@@ -1,89 +1,87 @@
 {
-    "Product": [
-      {
-        "id": 1,
-        "title": "T-Shirt",
-        "description": "A comfortable cotton t-shirt.",
-        "price": 1500,
-        "size": "M",
-        "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2uXyN2l9-WjojDbvNzfkSgTxNJX9CJc956Q&s"
-      },
-      {
-        "id": 2,
-        "title": "Jeans",
-        "description": "Slim-fit blue jeans.",
-        "price": 4500,
-        "size": "32",
-        "images": "https://images.tcdn.com.br/img/img_prod/1249807/calca_jeans_slim_fit_tradicional_masculina_lemier_collection_149_1_3fdb618a56a26cf173d7c99e77078285.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Sneakers",
-        "description": "Stylish running shoes.",
-        "price": 6500,
-        "size": "10",
-        "images": "https://imgnike-a.akamaihd.net/1920x1920/024583ID.jpg"
-      }
-    ],
-    "User": [
-      {
-        "id": 1,
-        "name": "John",
-        "subname": "Doe",
-        "email": "john.doe@example.com",
-        "number": "1234567890",
-        "password": "hashed_password",
-        "type": "customer"
-      },
-      {
-        "id": 2,
-        "name": "Jane",
-        "subname": "Smith",
-        "email": "jane.smith@example.com",
-        "number": "0987654321",
-        "password": "hashed_password",
-        "type": "customer"
-      }
-    ],
-    "Cart": [
-      {
-        "id": 1,
-        "loginId": 1,
-        "productId": 2
-      },
-      {
-        "id": 2,
-        "loginId": 2,
-        "productId": 1
-      }
-    ],
-    "Like": [
-      {
-        "id": 1,
-        "loginId": 1,
-        "productId": 3
-      },
-      {
-        "id": 2,
-        "loginId": 2,
-        "productId": 2
-      }
-    ],
-    "Pay": [
-      {
-        "id": 1,
-        "loginId": 1,
-        "productId": 1,
-        "amount": 1500,
-        "paymentStatus": "Completed"
-      },
-      {
-        "id": 2,
-        "loginId": 2,
-        "productId": 3,
-        "amount": 6500,
-        "paymentStatus": "Pending"
-      }
-    ]
-  }
-  
+  "Product": [
+    {
+      "id": 1,
+      "title": "NIKE AIR JORDAN 4 SB PINE GREEN",
+      "description": "Air Jordan 4 SB Pine Green foi um super lançamento de 2023 e apresenta nele uma parte superior de couro branco com sobreposições de camurça cinza neutro e detalhes contrastantes em verde pinho nos ilhós e na entressola. Nike SB substituindo Nike Air/Jumpman nos calcanhares com marca de língua vermelha no topo de uma entressola branca e sola de borracha Gum completam o design deixando-o assim um par inesquecível.",
+      "price": 449.99,
+      "size": "38/38/40/41/42/43/44/45",
+      "images": "itens/tenis/nike/Air Jordan 42.jpg"
+    },
+    {
+      "id": 2,
+      "title": "NIEK AIR JORDAN 4 X JUMPMAN TRAVIS SCOTT",
+      "description": "..CUT THE CHECK.",
+      "price": 5000,
+      "size": "39/40/41/42/43/44/45/46",
+      "images": "itens/tenis/nike/jumpman.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Air Force 1 Shadow Arctic Punch",
+      "description": "Detalhes deste Air Force 1 Shadow Arctic Punch! O novo  Air Force 1 Shadow Arctic Punch  com todo seu glamour em núcleos Barbie. Este tênis AF1 tem muitos detalhes, material de couro em Rosa claro, painéis em pastel e amarelo, uma dupla camada de Swoosh em amarelo e verde água. Além de ser super confortável, acompanha duas etiquetas na língua da Air. Edição especial da Força Aérea mais vendida em 2021. Tecnologia Ar tabulação, confortável e leve. Veste bem em diversos looks. Núcleos e únicos.","price": 1890,
+      "size": "39/40/41/42/43/44/45",
+      "images": "itens/tenis/nike/Nike Tênis d.jfif"
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "name": "John",
+      "subname": "Doe",
+      "email": "john.doe@example.com",
+      "number": "1234567890",
+      "password": "hashed_password",
+      "type": "customer"
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "subname": "Smith",
+      "email": "jane.smith@example.com",
+      "number": "0987654321",
+      "password": "hashed_password",
+      "type": "customer"
+    }
+  ],
+  "Cart": [
+    {
+      "id": 1,
+      "loginId": 1,
+      "productId": 2
+    },
+    {
+      "id": 2,
+      "loginId": 2,
+      "productId": 1
+    }
+  ],
+  "Like": [
+    {
+      "id": 1,
+      "loginId": 1,
+      "productId": 3
+    },
+    {
+      "id": 2,
+      "loginId": 2,
+      "productId": 2
+    }
+  ],
+  "Pay": [
+    {
+      "id": 1,
+      "loginId": 1,
+      "productId": 1,
+      "amount": 1500,
+      "paymentStatus": "Completed"
+    },
+    {
+      "id": 2,
+      "loginId": 2,
+      "productId": 3,
+      "amount": 6500,
+      "paymentStatus": "Pending"
+    }
+  ]
+}

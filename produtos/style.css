@@ -339,3 +339,9 @@ button{
   cursor: pointer;
   font-size: 1.2rem;
 }
+
+/* card prodcuts */
+
+.card-img-top{
+  border-radius: 10px;
+}
