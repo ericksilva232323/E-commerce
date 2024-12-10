@@ -2,7 +2,7 @@ const cart = document.getElementById("cart");
 
 async function listarCart(){
     try{
-        const response = await fetch("https:localhost:3000/cart");
+        const response = await fetch("http:localhost:3000/cart/");
         const cart = await response.json();
 
         console.log()
