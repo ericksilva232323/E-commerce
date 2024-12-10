@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
   <script src="https://sdk.mercadopago.com/js/v2"></script>
-  
+
 <body>
-  <body>
+    <div class="amount">
+      <h1>total a pagar</h1>
+      <h2 id="total-a-pagar"></h2>
+    </div>
     <div id="paymentBrick_container">
     </div>
     <div id="statusScreenBrick_container"></div>
@@ -22,12 +25,14 @@
   });
   const bricksBuilder = mp.bricks();
     const renderPaymentBrick = async (bricksBuilder) => {
+    const totalAmount = window.localStorage.getItem("cartTotal");
+    const amountToPay = totalAmount ? parseInt(totalAmount, 10) : 0;
       const settings = {
         initialization: {
           /*
             "amount" é a quantia total a pagar por todos os meios de pagamento com exceção da Conta Mercado Pago e Parcelas sem cartão de crédito, que têm seus valores de processamento determinados no backend através do "preferenceId"
           */
-          amount: 10000,
+          amount: amountToPay,
           preferenceId: "<PREFERENCE_ID>",
           payer: {
             firstName: "",
@@ -124,6 +129,22 @@
           window.statusScreenBrickController = await bricksBuilder.create('statusScreen', 'statusScreenBrick_container', settings);
         };
           renderStatusScreenBrick(bricksBuilder);
+
+          // Retrieve the total amount from localStorage
+const totalAmount = window.localStorage.getItem("cartTotal");
+
+// Select the element by its ID
+const totalElement = document.getElementById("total-a-pagar");
+
+// Check if the total amount exists in localStorage
+if (totalAmount) {
+    // Convert the total from cents to reais and display it
+    totalElement.textContent = `R$ ${(totalAmount / 100).toFixed(2).replace('.', ',')}`;
+} else {
+    // If no total is available, display a placeholder message
+    totalElement.textContent = "Nenhum valor disponível";
+}
+
   </script>
 </html>
   
