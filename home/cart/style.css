@@ -1,0 +1,341 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Alata;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27.6px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #242424;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  header {
+    background-color: #335B96;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-esq {
+    margin: 10px;
+  }
+  
+  .navbar-esq-button {
+    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .navbar-esq-button:hover {
+    border-radius: 20px;
+  }
+  
+  .overLay {
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+  }
+  
+  .overLay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overLay a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    font-size: 34px;
+    transition: 0.7s;
+  }
+  
+  .overLay a:hover,
+  .overLay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overLay .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height:450px) {
+    .overLay a {
+      font-size: 20px;
+    }
+  
+    .overLay,
+    .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  .navbar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  
+  .navbar-img:hover {
+    border-radius: 20px;
+  }
+  
+  .navbar-mid input{
+    width: 500px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    transition: 1s;
+  }
+  
+  .navbar-mid input:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .navbar-dir-button{
+    border-radius: 60px;
+    transition: 0.5s;
+    background-color: #335B96;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .navbar-dir img{
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #335B96;
+  }
+  
+  .overLay-dir{
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  
+  .overLay-content-dir{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overLay-dir a{
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    font-size: 34px;
+    transition: 0.7s;
+  }
+  
+  .overLay-dir a:hover, 
+  .overLay-dir a:focus{
+    color: #f1f1f1;
+  }
+  
+  .overLay-dir .closebtn-dir{
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height:450px) {
+    .overLay-dir a {
+      font-size: 20px;
+    }
+  
+    .overLay-dir,
+    .closebtn-dir {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background-color: #fff;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align cards to the top */
+    margin: 0 auto;
+    padding: 20px;
+    overflow: visible; /* Remove scrollbar */
+}
+
+  .container-logo {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+  
+  .container-logo div {
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  
+  section.module p {
+    margin-bottom: 40px;
+  }
+  
+  section.module:last-child {
+    margin-bottom: 0;
+  }
+  
+  section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  
+  section.module.content {
+    padding: 40px 0;
+    background-color: #ece7ec;
+  }
+  
+  section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+
+  section.module.parallax-1 {
+    background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+  }
+  
+  section.module.parallax-2 {
+    background-image: url(../assets/utopia1.jpg);
+  }
+  
+  section.module.parallax-3 {
+    background-image: url(../assets/utopia2.png);
+  }
+  
+  section.module.parallax-4 {
+    background-image: url(../assets/image4.jpg);
+  }
+  
+  section.module.parallax h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 78px;
+    z-index: 50;
+    text-transform: uppercase;
+  }
+
+/* listen of products in display grid  */
+
+.container-itens {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 16px; /* Adjust spacing between items */
+}
+
+.box{
+  background-color: #335B96;
+  height: 400px;
+  width: 300px;
+  margin: 0 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width within grid column */
+  max-width: 300px;
+  padding: 20px;
+  margin: auto;
+  height: 400px; /* Consistent height */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Prevent images from stretching too tall */
+    object-fit: cover; /* Crop to fit the box */
+}
+
+button{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}

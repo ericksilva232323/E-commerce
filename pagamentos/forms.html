@@ -1,12 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="https://sdk.mercadopago.com/js/v2">
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  
 <body>
-  <div id="paymentBrick_container">
-  </div>
-  <div id="statusScreenBrick_container"></div>
+  <body>
+    <div id="paymentBrick_container">
+    </div>
+    <div id="statusScreenBrick_container"></div>
+  
+</body>
+
   <script>
   const mp = new MercadoPago('TEST-01f4208a-cc86-4368-a7f8-d63452055bc5', {
     locale: 'pt'
@@ -114,9 +123,8 @@
           };
           window.statusScreenBrickController = await bricksBuilder.create('statusScreen', 'statusScreenBrick_container', settings);
         };
-        renderStatusScreenBrick(bricksBuilder);
+          renderStatusScreenBrick(bricksBuilder);
   </script>
-</body>
 </html>
   
 

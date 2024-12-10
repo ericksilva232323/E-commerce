@@ -1,14 +1,19 @@
 const prods = document.getElementById("produtos");
-
+var produtos = []
+var carrinho = JSON.parse(window.localStorage.getItem("carrinho"))
+if(!carrinho){
+    carrinho = [];
+}else{
+    console.log(JSON.stringify(carrinho));
+}
 
 async function listarProdutos() {
     try {
         const response = await fetch("http://localhost:3000/product");
-        const produtos = await response.json();
-
-        console.log()
+        const lista = await response.json();
+        produtos = lista;
         let output = "";
-        produtos.forEach(produto => {
+        lista.forEach(produto => {
             output += `
            <div class="card" style="width: 18rem;">
                     <img src="${produto.images}" class="card-img-top" alt="${produto.title}">
@@ -27,11 +32,12 @@ async function listarProdutos() {
 }
 
 function comprar(id) {
-    console.log(`comprar() foi chamado com id: ${id}`); // Debug
-
     const produto = produtos.find((prod) => prod.id === id); // Encontra o produto pelo ID
     if (produto) {
-        alert(`Produto "${produto.nome}" comprado com sucesso!`);
+        alert(`Produto "${produto.title}" adiconado ao carrinho`);
+        carrinho.push(produto);
+        window.localStorage.setItem("carrinho",JSON.stringify(carrinho));
+        window.location.reload();
     } else {
         alert("Produto não encontrado.");
     }
