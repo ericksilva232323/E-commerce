@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "title": "NIEK AIR JORDAN 4 X JUMPMAN TRAVIS SCOTT",
+      "title": "NIKE AIR JORDAN 4 X JUMPMAN TRAVIS SCOTT",
       "description": "..CUT THE CHECK.",
       "price": 5000,
       "size": "39/40/41/42/43/44/45/46",
@@ -18,10 +18,17 @@
     },
     {
       "id": 3,
-      "title": "Air Force 1 Shadow Arctic Punch",
+      "title": "NIKE AIR FORCE 1 SHADOW ARTIC PUNCH",
       "description": "Detalhes deste Air Force 1 Shadow Arctic Punch! O novo  Air Force 1 Shadow Arctic Punch  com todo seu glamour em núcleos Barbie. Este tênis AF1 tem muitos detalhes, material de couro em Rosa claro, painéis em pastel e amarelo, uma dupla camada de Swoosh em amarelo e verde água. Além de ser super confortável, acompanha duas etiquetas na língua da Air. Edição especial da Força Aérea mais vendida em 2021. Tecnologia Ar tabulação, confortável e leve. Veste bem em diversos looks. Núcleos e únicos.","price": 1890,
       "size": "39/40/41/42/43/44/45",
       "images": "itens/tenis/nike/Nike Tênis d.jfif"
+    },
+    {
+      "id": 4,
+      "title": "NIKE AIR FORCE 1 LOW STUSSY FOSSIL - CREAM",
+      "description": "Este par apresenta uma parte superior de tecido semelhante a cânhamo com Swooshes bordados e um tecido alternativo de pêlo comprido nas abas do calcanhar. Alguns enfeites de metal no calcanhar, etiquetas de língua de marca dupla e um logotipo Stüssy duplo 'S' perfurado na biqueira completam o design.",
+      "size": "36/37/38/39/40/41/42/43/44/45",
+      "images": "itens/tenis/nike/stussy.webp" 
     }
   ],
   "User": [
@@ -48,12 +55,12 @@
     {
       "id": 1,
       "loginId": 1,
-      "productId": 2
+      "productId": 
     },
     {
       "id": 2,
       "loginId": 2,
-      "productId": 1
+      "productId": 2
     }
   ],
   "Like": [
