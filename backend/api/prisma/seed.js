@@ -11,7 +11,7 @@ async function main() {
   for (const product of data.Product) {
     await prisma.product.create({ data: product });
   }
-  
+
   // Seed User data
   for (const user of data.User) {
     await prisma.user.create({ data: user });
