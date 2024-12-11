@@ -1,7 +1,7 @@
 {
   "Product": [
     {
-      "id": 1,
+      "id": 5,
       "title": "NIKE AIR JORDAN 4 SB PINE GREEN",
       "description": "Air Jordan 4 SB Pine Green foi um super lançamento de 2023 e apresenta nele uma parte superior de couro branco com sobreposições de camurça cinza neutro e detalhes contrastantes em verde pinho nos ilhós e na entressola. Nike SB substituindo Nike Air/Jumpman nos calcanhares com marca de língua vermelha no topo de uma entressola branca e sola de borracha Gum completam o design deixando-o assim um par inesquecível.",
       "price": 449.99,
@@ -9,7 +9,7 @@
       "images": "itens/tenis/nike/Air Jordan 42.jpg"
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "NIKE AIR JORDAN 4 X JUMPMAN TRAVIS SCOTT",
       "description": "..CUT THE CHECK.",
       "price": 5000,
@@ -17,78 +17,80 @@
       "images": "itens/tenis/nike/jumpman.jpeg"
     },
     {
-      "id": 3,
+      "id": 7,
       "title": "NIKE AIR FORCE 1 SHADOW ARTIC PUNCH",
-      "description": "Detalhes deste Air Force 1 Shadow Arctic Punch! O novo  Air Force 1 Shadow Arctic Punch  com todo seu glamour em núcleos Barbie. Este tênis AF1 tem muitos detalhes, material de couro em Rosa claro, painéis em pastel e amarelo, uma dupla camada de Swoosh em amarelo e verde água. Além de ser super confortável, acompanha duas etiquetas na língua da Air. Edição especial da Força Aérea mais vendida em 2021. Tecnologia Ar tabulação, confortável e leve. Veste bem em diversos looks. Núcleos e únicos.","price": 1890,
+      "description": "Detalhes deste Air Force 1 Shadow Arctic Punch! O novo  Air Force 1 Shadow Arctic Punch  com todo seu glamour em núcleos Barbie. Este tênis AF1 tem muitos detalhes, material de couro em Rosa claro, painéis em pastel e amarelo, uma dupla camada de Swoosh em amarelo e verde água. Além de ser super confortável, acompanha duas etiquetas na língua da Air. Edição especial da Força Aérea mais vendida em 2021. Tecnologia Ar tabulação, confortável e leve. Veste bem em diversos looks. Núcleos e únicos.",
+      "price": 1890,
       "size": "39/40/41/42/43/44/45",
       "images": "itens/tenis/nike/Nike Tênis d.jfif"
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "NIKE AIR FORCE 1 LOW STUSSY FOSSIL - CREAM",
       "description": "Este par apresenta uma parte superior de tecido semelhante a cânhamo com Swooshes bordados e um tecido alternativo de pêlo comprido nas abas do calcanhar. Alguns enfeites de metal no calcanhar, etiquetas de língua de marca dupla e um logotipo Stüssy duplo 'S' perfurado na biqueira completam o design.",
+      "price": 800,
       "size": "36/37/38/39/40/41/42/43/44/45",
       "images": "itens/tenis/nike/stussy.webp" 
+    },
+    {
+      "id": 9 ,
+      "title": "BAPE STA OS #3",
+      "description": "A BATHING APE Women Low Sneakers",
+      "price": 525,
+      "size": "36/38/38/39/40/41/42/43",
+      "images": "itens/tenis/bape/0ZXSHM191006KBLX-pdp-1.jpg" 
+    },
+    {
+      "id": 10,
+      "title": "A Bathing Ape Bape Sta Low Hello Kitty",
+      "description": "Esta coleção, que reedita peças clássicas do passado, é uma edição especial que reproduz os gráficos originais de quando foram lançadas e traz o ano de lançamento impresso em cada peça. É um item fofo.",
+      "price": 679.99,
+      "size": "34/35/36/37/38/39/40/41/42/43/44",
+      "images": "itens/tenis/bape/5d6a65b6-d9c10b8497223e41fc17217645810912-1024-1024.jpeg" 
+    },
+    {
+      "id": 11,
+      "title": "BAPE STA #3",
+      "description": "A BATHING APE Low Sneakers",
+      "price": 551,
+      "size": "36/37/38/39/40/41/42/43/44",
+      "images": "itens/tenis/bape/bape3.webp" 
+    },
+    {
+      "id": 12,
+      "title": "Tênis RS-X 40th Anniversary",
+      "description": "O tênis RS-X está de volta. Esta silhueta futurista retrô fez sucesso quando foi lançada em 2018, celebrada por seu design disruptivo, misturas de materiais inovadores e cores ousadas. Hoje, o RS-X regressa para uma nova geração que vive para expressar a sua individualidade. Está aqui para iniciar uma revolução de autoexpressão. Esta execução especial do 40º aniversário celebra a história da tecnologia RS com sobreposições de couro e uma inserção de calcanhar em TPU de cimento.",
+      "price": 599.90,
+      "size": "39/42",
+      "images": "itens/tenis/puma/puma-180.jpeg" 
+    },
+    {
+      "id": 13,
+      "title": "Tênis RS-X Suede",
+      "description": "O RS-X está de volta. Essa silhueta retrô do futuro fez sucesso quando foi lançada em 2018, celebrada por seu design disruptivo, misturas de materiais novos e cores ousadas. Hoje, o RS-X retorna para uma nova geração de consumidores que vivem para expressar sua individualidade. Está aqui para iniciar uma revolução de auto-expressão. Esta versão do tênis casual apresenta uma malha superior e uma mistura de nobuck sintético e sobreposições de camurça peluda.",
+      "price": 649.90,
+      "size": "35/36/37/3/39/40/41/42/43/44/45",
+      "images": "itens/tenis/puma/puma-RS-X Mix.jpg" 
+    }
+    {
+      "id": 14,
+      "title": "itens/tenis/puma/rs-x.jpg",
+      "description": "O RS-X está de volta. A silhueta retrofuturista deste tênis retorna com uma estética progressiva e detalhes angulares, completos com sobreposições em nubuck e em suede. Essa combinação tem tudo a ver com um design inovador para mostrar seu estilo revolucionário.",
+      "price": 549.90,
+      "size": "36/37/38/39/40/41/42/43/44/45",
+      "images": "itens/tenis/puma/rs-x.jpg" 
     }
   ],
   "User": [
-    {
-      "id": 1,
-      "name": "John",
-      "subname": "Doe",
-      "email": "john.doe@example.com",
-      "number": "1234567890",
-      "password": "hashed_password",
-      "type": "customer"
-    },
-    {
-      "id": 2,
-      "name": "Jane",
-      "subname": "Smith",
-      "email": "jane.smith@example.com",
-      "number": "0987654321",
-      "password": "hashed_password",
-      "type": "customer"
-    }
+    
   ],
   "Cart": [
-    {
-      "id": 1,
-      "loginId": 1,
-      "productId": 
-    },
-    {
-      "id": 2,
-      "loginId": 2,
-      "productId": 2
-    }
+    
   ],
   "Like": [
-    {
-      "id": 1,
-      "loginId": 1,
-      "productId": 3
-    },
-    {
-      "id": 2,
-      "loginId": 2,
-      "productId": 2
-    }
+    
   ],
   "Pay": [
-    {
-      "id": 1,
-      "loginId": 1,
-      "productId": 1,
-      "amount": 1500,
-      "paymentStatus": "Completed"
-    },
-    {
-      "id": 2,
-      "loginId": 2,
-      "productId": 3,
-      "amount": 6500,
-      "paymentStatus": "Pending"
-    }
+    
   ]
 }
