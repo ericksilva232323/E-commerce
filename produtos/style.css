@@ -214,7 +214,9 @@
     align-items: flex-start; /* Align cards to the top */
     margin: 0 auto;
     padding: 20px;
-    overflow: visible; /* Remove scrollbar */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snap to cards while scrolling */
+    padding: 10px; /* Add some padding for aesthetics */
 }
 
   .container-logo {
@@ -313,30 +315,114 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Full width within grid column */
-  max-width: 300px;
-  padding: 20px;
-  margin: auto;
-  height: 400px; /* Consistent height */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Makes the card responsive */
+  max-width: 300px; /* Restricts the maximum width */
+  padding: 20px; /* Provides spacing inside the card */
+  margin: 0 auto; /* Centers the card horizontally */
+  height: 400px; /* Ensures all cards are the same height */
+  background-color: #fff; /* Keeps a clean white background */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.card-img-top {
-    max-width: 100%;
-    height: auto;
-    max-height: 200px; /* Prevent images from stretching too tall */
-    object-fit: cover; /* Crop to fit the box */
+.card:hover {
+  transform: translateY(-10px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-button{
-  background-color: #333;
-  color: #fff;
+/* Card image */
+.card img {
+  width: 100%; /* Ensures image takes up full width */
+  height: 200px; /* Keeps images uniform in height */
+  object-fit: contain; /* Maintains aspect ratio, no distortion */
+  border-radius: 8px; /* Matches card's rounded style */
+}
+
+/* Content inside the card */
+.card h5 {
+  font-size: 1.2rem; /* Slightly larger font for the title */
+  margin: 10px 0; /* Adds spacing between title and image */
+  color: #333; /* Darker text for better readability */
+}
+
+.card p {
+  font-size: 1rem; /* Standard size for price text */
+  color: #555; /* Lighter gray for a secondary look */
+  margin: 10px 0; /* Consistent spacing */
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #333; /* Dark background for the button */
+  color: #fff; /* White text for contrast */
+  font-size: 0.9rem; /* Slightly smaller text for buttons */
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #555; /* Lighter shade on hover */
+}
+
+
+/* Wrapper for product cards */
+#produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 16px; /* Space between cards */
+  padding: 20px; /* Space around the container */
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar-mid {
+    display: none; /* Hide search bar on mobile */
+  }
+
+  .container {
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snap behavior */
+    gap: 10px; /* Reduce space between cards for smaller screens */
+    padding: 10px; /* Add padding for scroll space */
+  }
+
+  .card {
+    max-width: 95%; /* Limit card width */
+    margin: 0 auto; /* Center cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better look */
+  }
+
+  .card-img-top {
+    max-width: 100%;
+    height: auto; /* Let image scale naturally */
+    margin: 0 auto; /* Center images */
+    object-fit: contain; /* Ensure entire image fits */
+  }
+
+  .card-body {
+    padding: 8px 12px; /* Reduce padding for smaller cards */
+    text-align: center; /* Center-align text */
+  }
+
+  .card-title {
+    font-size: 1rem; /* Scale title size */
+    margin-bottom: 5px; /* Reduce spacing */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Adjust price font size */
+    margin-bottom: 10px; /* Space before button */
+  }
+
+  button {
+    font-size: 0.85rem; /* Adjust button font size */
+    padding: 5px 10px; /* Compact button design */
+  }
   font-size: 1.2rem;
 }
 

@@ -704,5 +704,9 @@ h1 {
       position: relative;
       overflow: hidden; /* Hide overflow */
   }
-
+  
+  .con{
+    justify-content: center;
+    align-items: center;
+  }
 }
