@@ -26,6 +26,6 @@
     "mercadopago": "^2.1.0"
   },
   "prisma": {
-    "seed": "node prisma/seed"
+    "seed": "node seed"
   }
 }
