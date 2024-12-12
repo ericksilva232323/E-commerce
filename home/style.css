@@ -211,7 +211,6 @@ main {
   justify-content: center;
   width: 100%;
   max-width: 760px;
-  margin: 0 auto;
   padding: 0 20px;
   align-items: center;
   background-color: white;
@@ -293,7 +292,7 @@ section.module.parallax-1 {
   align-items: center;
   justify-content: center;
   border: solid 5px #fff;
-  margin: 0 420px 0 420px;
+  margin: 0 20vw 0;
   border-radius: 10px;
 }
 
@@ -704,9 +703,14 @@ h1 {
       position: relative;
       overflow: hidden; /* Hide overflow */
   }
-  
-  .con{
-    justify-content: center;
-    align-items: center;
+  .module.parallax.parallax-1 div {
+    margin: 0 5vh 0 0;
+    z-index: 9;
   }
+  .overlay,
+  .overLay-dir {
+    
+    z-index: 11;
+  
+}
 }
