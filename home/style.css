@@ -193,10 +193,7 @@ header {
   }
 }
 
-
 main {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -209,13 +206,18 @@ main {
 .container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vh;
   max-width: 760px;
   padding: 0 20px;
   align-items: center;
   background-color: white;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about{
+  text-align: center;
+  width: 60vh;
 }
 
 .container-logo {
@@ -292,7 +294,7 @@ section.module.parallax-1 {
   align-items: center;
   justify-content: center;
   border: solid 5px #fff;
-  margin: 0 20vw 0;
+  margin: 0 30vw 0;
   border-radius: 10px;
 }
 

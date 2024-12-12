@@ -1,4 +1,6 @@
 const prods = document.getElementById("produtos");
+const token = localStorage.getItem("authToken");
+
 var produtos = []
 var carrinho = JSON.parse(window.localStorage.getItem("carrinho"))
 if (!carrinho) {
@@ -33,6 +35,11 @@ async function listarProdutos() {
 
 function comprar(id) {
     const produto = produtos.find((prod) => prod.id === id); // Encontra o produto pelo ID
+    if (!token) {
+        alert("Você precisa estar logado para adicionar produtos ao carrinho.");
+        window.location.href = "../home/profile.html"; // Redirect to login page if not logged in
+        return;
+    }
     if (produto) {
         alert(`Produto "${produto.title}" adiconado ao carrinho`);
         carrinho.push(produto);
