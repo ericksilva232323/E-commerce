@@ -695,6 +695,7 @@ h1 {
       background-attachment: scroll; /* Disable parallax effect */
       position: relative;
       overflow: hidden; /* Hide any overflow */
+       
   }
 
   /* For all module.parallax sections, ensure proper layout */
@@ -706,13 +707,10 @@ h1 {
       overflow: hidden; /* Hide overflow */
   }
   .module.parallax.parallax-1 div {
-    margin: 0 5vh 0 0;
     z-index: 9;
+    align-self: center;
   }
   .overlay,
   .overLay-dir {
-    
-    z-index: 11;
-  
-}
+      z-index: 11;
 }
