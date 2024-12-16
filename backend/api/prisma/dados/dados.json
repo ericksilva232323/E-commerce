@@ -6,7 +6,7 @@
       "description": "Air Jordan 4 SB Pine Green foi um super lançamento de 2023 e apresenta nele uma parte superior de couro branco com sobreposições de camurça cinza neutro e detalhes contrastantes em verde pinho nos ilhós e na entressola. Nike SB substituindo Nike Air/Jumpman nos calcanhares com marca de língua vermelha no topo de uma entressola branca e sola de borracha Gum completam o design deixando-o assim um par inesquecível.",
       "price": 449.99,
       "size": "38/38/40/41/42/43/44/45",
-      "images": "itens/tenis/nike/Air Jordan 42.jpg"
+      "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvZTBalAws1ivOfFR5EezTy5_UFv_rMTcUg&s"
     },
     {
       "id": 6,
@@ -14,7 +14,7 @@
       "description": "..CUT THE CHECK.",
       "price": 5000,
       "size": "39/40/41/42/43/44/45/46",
-      "images": "itens/tenis/nike/jumpman.jpeg"
+      "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1LCu4DIjTZr6b-Z2CuGL1OKw_yfR6vYTTRA&s"
     },
     {
       "id": 7,
@@ -22,7 +22,7 @@
       "description": "Detalhes deste Air Force 1 Shadow Arctic Punch! O novo  Air Force 1 Shadow Arctic Punch  com todo seu glamour em núcleos Barbie. Este tênis AF1 tem muitos detalhes, material de couro em Rosa claro, painéis em pastel e amarelo, uma dupla camada de Swoosh em amarelo e verde água. Além de ser super confortável, acompanha duas etiquetas na língua da Air. Edição especial da Força Aérea mais vendida em 2021. Tecnologia Ar tabulação, confortável e leve. Veste bem em diversos looks. Núcleos e únicos.",
       "price": 1890,
       "size": "39/40/41/42/43/44/45",
-      "images": "itens/tenis/nike/Nike Tênis d.jfif"
+      "images": "https://sneakersul.com.br/cdn/shop/files/air-force-1-shadow-arctic-punch-3.webp?v=1707486201"
     },
     {
       "id": 8,
@@ -30,7 +30,7 @@
       "description": "Este par apresenta uma parte superior de tecido semelhante a cânhamo com Swooshes bordados e um tecido alternativo de pêlo comprido nas abas do calcanhar. Alguns enfeites de metal no calcanhar, etiquetas de língua de marca dupla e um logotipo Stüssy duplo 'S' perfurado na biqueira completam o design.",
       "price": 800,
       "size": "36/37/38/39/40/41/42/43/44/45",
-      "images": "itens/tenis/nike/stussy.webp" 
+      "images": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F11%2Fstussy-nike-air-force-1-low-release-date-cz9084-001-cz9084-200-000.jpg?w=960&cbr=1&q=90&fit=max" 
     },
     {
       "id": 9 ,
@@ -38,7 +38,7 @@
       "description": "A BATHING APE Women Low Sneakers",
       "price": 525,
       "size": "36/38/38/39/40/41/42/43",
-      "images": "itens/tenis/bape/0ZXSHM191006KBLX-pdp-1.jpg" 
+      "images": "https://int.bape.com/cdn/shop/files/0ZXSHW291010NBLA-pdp-1.jpg?v=1733470648&width=1200" 
     },
     {
       "id": 10,
@@ -54,7 +54,7 @@
       "description": "A BATHING APE Low Sneakers",
       "price": 551,
       "size": "36/37/38/39/40/41/42/43/44",
-      "images": "itens/tenis/bape/bape3.webp" 
+      "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIV-cfLdrKDJ-CxrZYsaoAhpvMoBaS3wiJw&s" 
     },
     {
       "id": 12,
@@ -62,7 +62,7 @@
       "description": "O tênis RS-X está de volta. Esta silhueta futurista retrô fez sucesso quando foi lançada em 2018, celebrada por seu design disruptivo, misturas de materiais inovadores e cores ousadas. Hoje, o RS-X regressa para uma nova geração que vive para expressar a sua individualidade. Está aqui para iniciar uma revolução de autoexpressão. Esta execução especial do 40º aniversário celebra a história da tecnologia RS com sobreposições de couro e uma inserção de calcanhar em TPU de cimento.",
       "price": 599.90,
       "size": "39/42",
-      "images": "itens/tenis/puma/puma-180.jpeg" 
+      "images": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/393771/06/sv01/fnd/BRA/w/1000/h/1000/fmt/png" 
     },
     {
       "id": 13,
@@ -70,7 +70,7 @@
       "description": "O RS-X está de volta. Essa silhueta retrô do futuro fez sucesso quando foi lançada em 2018, celebrada por seu design disruptivo, misturas de materiais novos e cores ousadas. Hoje, o RS-X retorna para uma nova geração de consumidores que vivem para expressar sua individualidade. Está aqui para iniciar uma revolução de auto-expressão. Esta versão do tênis casual apresenta uma malha superior e uma mistura de nobuck sintético e sobreposições de camurça peluda.",
       "price": 649.90,
       "size": "35/36/37/3/39/40/41/42/43/44/45",
-      "images": "itens/tenis/puma/puma-RS-X Mix.jpg" 
+      "images": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/396361/10/sv01/fnd/BRA/w/1000/h/1000/fmt/png" 
     },
     {
       "id": 14,
@@ -78,7 +78,7 @@
       "description": "O RS-X está de volta. A silhueta retrofuturista deste tênis retorna com uma estética progressiva e detalhes angulares, completos com sobreposições em nubuck e em suede. Essa combinação tem tudo a ver com um design inovador para mostrar seu estilo revolucionário.",
       "price": 549.90,
       "size": "36/37/38/39/40/41/42/43/44/45",
-      "images": "itens/tenis/puma/rs-x.jpg" 
+      "images": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/390776/36/sv01/fnd/BRA/w/1000/h/1000/fmt/png" 
     }
   ],
   "User": [

@@ -193,10 +193,7 @@ header {
   }
 }
 
-
 main {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -209,14 +206,32 @@ main {
 .container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100vh;
   max-width: 760px;
-  margin: 0 auto;
   padding: 0 20px;
   align-items: center;
   background-color: white;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about{
+  text-align: center;
+  width: 60vh;
+}
+
+.container-about-img{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px+;
+}
+ 
+.container-about-img img{
+  width: 600px;
+  height: 400px;
+  gap: 40px;
 }
 
 .container-logo {
@@ -293,7 +308,7 @@ section.module.parallax-1 {
   align-items: center;
   justify-content: center;
   border: solid 5px #fff;
-  margin: 0 420px 0 420px;
+  margin: 0 30vw 0;
   border-radius: 10px;
 }
 
@@ -694,6 +709,7 @@ h1 {
       background-attachment: scroll; /* Disable parallax effect */
       position: relative;
       overflow: hidden; /* Hide any overflow */
+       
   }
 
   /* For all module.parallax sections, ensure proper layout */
@@ -704,9 +720,11 @@ h1 {
       position: relative;
       overflow: hidden; /* Hide overflow */
   }
-  
-  .con{
-    justify-content: center;
-    align-items: center;
+  .module.parallax.parallax-1 div {
+    z-index: 9;
+    align-self: center;
   }
+  .overlay,
+  .overLay-dir {
+      z-index: 11;
 }
