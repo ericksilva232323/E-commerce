@@ -215,20 +215,20 @@ main {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.about{
+.about {
   text-align: center;
   width: 60vh;
 }
 
-.container-about-img{
-  display:flex;
+.container-about-img {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 20px+;
 }
- 
-.container-about-img img{
+
+.container-about-img img {
   width: 600px;
   height: 400px;
   gap: 40px;
@@ -578,7 +578,7 @@ h1 {
 }
 
 .item-9 {
-  background-image: url(/itens/tenis/0ZXSHM191006KBLX-pdp-1.jpg);
+  background-image: url(../itens/tenis/bape/);
 }
 
 .item-10 {
@@ -645,7 +645,7 @@ h1 {
   justify-content: center;
 }
 
-.logo-bape img{
+.logo-bape img {
   width: 200px;
   height: 120px;
 }
@@ -701,15 +701,18 @@ h1 {
 /* Hide search bar on mobile */
 @media (max-width: 768px) {
   .navbar-mid {
-      display: none; /* Hide search bar on mobile */
+    display: none;
+    /* Hide search bar on mobile */
   }
 
   /* Hide parallax effect on mobile */
   .module.parallax {
-      background-attachment: scroll; /* Disable parallax effect */
-      position: relative;
-      overflow: hidden; /* Hide any overflow */
-       
+    background-attachment: scroll;
+    /* Disable parallax effect */
+    position: relative;
+    overflow: hidden;
+    /* Hide any overflow */
+
   }
 
   /* For all module.parallax sections, ensure proper layout */
@@ -717,14 +720,65 @@ h1 {
   .module.parallax.parallax-2,
   .module.parallax.parallax-3,
   .module.parallax.parallax-4 {
-      position: relative;
-      overflow: hidden; /* Hide overflow */
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow */
   }
+
   .module.parallax.parallax-1 div {
     z-index: 9;
     align-self: center;
   }
+
   .overlay,
   .overLay-dir {
-      z-index: 11;
+    z-index: 11;
+  }
+
+}
+
+.container-top-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:  0 0 30px 0 ;
+  gap: 10px;
+}
+
+.container-top-about h1 h2 h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000;
+  font-weight: 900;
+}
+
+.container-top-about svg{
+  color:#fff;
+  margin: 20px;
+  border-radius: 100%;
+  background-color: #0056b3;
+  transition: 1s;
+  border: solid 1px #007bff;
+}
+
+.container-top-about svg:hover{
+  width: 70px;
+  height: 35px;
+  border-radius: 50px;
+  background-image: url(../assets/cactus-jack-by-travis-scott-x-kaws-for-fragment-tee-vintage-wash-branco-751761.jpg);
+  background-size: cover;
+  color: #000;
+}
+
+.container-about-img-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.container-about-img-1 img{
+  width: 80%;
+  height: 80%;
 }
